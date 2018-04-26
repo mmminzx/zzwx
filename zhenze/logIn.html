@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script src="../js/zhenze/logIn.js"></script>
+
+    <style type="text/css">
+        html,body{
+            height:100%;
+            width:100%;
+        }
+
+        #iBody
+        {
+            height:100%;
+            margin:0;
+            background-image:url(../images/bgimage2.png);
+            background-repeat:no-repeat;
+            background-color: #fefefe;
+            background-size:100% 100%;
+            -moz-background-size:100% 100%
+        }
+        .text{border:solid 2px #ccc;width:400px;height:40px;background:url(http://d.lanrentuku.com/down/png/1211/blueberry/user_friend.png) no-repeat 0 center;}
+        .text input{float:left;border:none;background:none;height:40px;line-height:30px;width:100%; text-indent:32px;}
+
+    </style>
+    <script>
+//        function click() {
+//            window.location.href = "Home.html";
+//        }
+    </script>
+    <script>
+        function remember() {
+//            console.log("记住密码");
+            if (isremember==1)
+            {
+                isremember=2;
+                var obj = document.getElementById("gou");
+                obj.style.backgroundImage="url(../images/checkbox.png)";
+            }
+            else
+            {
+                isremember=1;
+                var obj = document.getElementById("gou");
+                obj.style.backgroundImage="url(../images/dagou.png)";
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body  id="iBody">
+<!--<div data-role="header" data-theme="f">-->
+<!--<h1>登录</h1>-->
+<!--<a href="#" onclick="toSignIn()" class="ui-btn ui-btn-right  ui-icon-user  ui-btn-icon-left" rel="external">注册</a>-->
+
+<!--</div>-->
+
+
+
+<div data-role="main" class="ui-content" >
+
+    <!--<img src="../images/logo.png" style="width:60%;margin-left:20%"/>-->
+    <!--<h1 style="font-family:'Microsoft YaHei';text-align:center;color:#f9a15a">震泽水环境移动监督管理平台</h1>-->
+    <div class="ui-field-contain" style="margin-top: 250px">
+        <!--<label for="username">账号：</label>-->
+        <input type="text" name="fullname" placeholder="输入账号" id="username">
+        <!--<label for="">密码：</label>-->
+        <input type="password" name="pwd" placeholder="输入密码" id="pwd">
+    </div>
+    <button  type="button" data-theme="f" class="btn btn-primary btn-lg btn-block" id="btn_submit">登录</button>
+    <br>
+    <a href="" id="RemembPassword" rel="external" style="float:left;" onclick="remember()">
+        <div id="gou" style="width: 20px;height: 15px;margin-top: 2.5px;float: left;background-image:url(../images/dagou.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%"></div>记住密码</a>
+    <a href="" id="changePassword" rel="external" style="float:right;" onclick="changepwd()">修改密码</a>
+</div>
+
+<div data-role="popup" data-theme="f" id="myPopup"></div>
+
+</body>
+
+</html>

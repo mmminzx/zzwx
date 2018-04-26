@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title>民情日志</title>-->
+
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <title>河道巡查</title>
+    <script src="../js/zhenze/weituoxuncha.js"></script>
+    <!--<script src="../js/zhenze/patrol.js"></script>-->
+    <style>
+        html,body{
+            height:100%;
+            width:100%;
+        }
+
+        .headDiv{
+            width: 100%;
+            height: 250px;
+
+            margin-top: 0px;
+            /*text-align:center;*/
+            /*background-color: #00A2D4*/
+        }
+
+        .btnDiv
+        {
+
+            width: 200px;
+            height: 200px;
+            background-image: url(../images/green.png);
+            background-repeat:no-repeat;
+            /*margin-top: 100px;*/
+            background-size:100% 100%;
+            -moz-background-size:100% 100%;
+
+
+        }
+    </style>
+    <script>
+        window.onpageshow = function(event){
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+        //        if(back==1){
+        //            location.reload();
+        //            back=0;
+        //        }
+        //        else{
+        //
+        //        }
+
+    </script>
+
+
+</head>
+
+<body>
+<!--<img src="../images/daka.png" height="254" width="254"/>-->
+<div id="menu" style="width: 100%;text-align: center;font-size: 22px;margin-top: 60px"></div>
+<style type="text/css">
+    .div1{  width: 100px; height: 100px; border: 1px solid #000000;}
+    .div2{ width:40px ; height: 40px; background-color: green;}
+
+    .div11{
+        position: relative;
+    }
+    .div22{
+        position: absolute;margin:auto; top: 0;left: 0;right: 0;bottom: 0;
+    }
+</style>
+
+<div id="xuncha" class="headDiv div11"  >
+    <div class="btnDiv div22" id="btnview">
+        <label id="title" style="text-align: center;color: white;font-size: 24px;margin-top: 120px">开始巡河 </label>
+    </div>
+
+</div>
+<div style="width: 100%;height: 70px;margin-bottom: 10px;">
+    <label id="timelabel" style="text-align: center;font-size: 18px;"></label>
+    <label id="riverlabel" style="text-align: center;font-size: 18px;"></label>
+</div>
+<div id="tishi" style="width: 100%;height: 240px;text-align: center;font-size: 22px;margin-top: 40px">
+    <!--<label style="text-align: center;font-size: 22px;margin-top: 40px">未签到！请点击上方按钮开始巡河</label>-->
+    请点击上方按钮开始巡河</div>
+<div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup"></div>
+</body>
+</html>
+<!--<script>-->
+<!--function updatalocation() {-->
+<!--console.log("location");-->
+<!--// 百度地图API功能-->
+<!--var map = new BMap.Map("allmap");-->
+<!--var point = new BMap.Point(116.331398,39.897445);-->
+<!--//       map.centerAndZoom(point,12);-->
+
+<!--var geolocation = new BMap.Geolocation();-->
+<!--geolocation.getCurrentPosition(function(r){-->
+<!--if(this.getStatus() == BMAP_STATUS_SUCCESS){-->
+<!--//            var mk = new BMap.Marker(r.point);-->
+<!--//            map.addOverlay(mk);-->
+<!--//            map.panTo(r.point);-->
+<!--alert('您的位置：'+r.point.lng+','+r.point.lat);-->
+
+<!--lon=r.point.lng;-->
+<!--lat=r.point.lat;-->
+
+<!--var value1 = localStorage["selectedRivers"];-->
+
+<!--var Data= JSON.parse(value1)-->
+
+<!--var infoarr=Data.selectedRivers;-->
+<!--var endTime=getNowFormatDate();-->
+<!--console.log(endTime+"ssss"+lon+","+lat);-->
+<!--//     $.ajax({-->
+<!--//         type: "get",-->
+<!--//         url: svc_own + "Ashx_Question.ashx",-->
+<!--//         dataType: 'jsonp',-->
+<!--//         jsonp: 'callback',-->
+<!--//         data: {-->
+<!--//             method: "updateSign",-->
+<!--//             token:token,-->
+<!--//             id:Data.signId,-->
+<!--//             endTime:endTime,-->
+<!--//             endAddress:"",-->
+<!--//             coordinate:"{\"lat\":\""+lat+"\",\"lon\":\""+lon+"\"}",-->
+<!--//         },-->
+<!--//         success: function (result) {-->
+<!--//             // console.log(result);-->
+<!--//             if (result.isOK) {-->
+<!--//                 console.log(result);-->
+<!--//                 alert("签退成功");-->
+<!--//                 localStorage.patrolStatus = "0";-->
+<!--//                 var Data= JSON.parse(value)-->
+<!--//                 localStorage.removeItem('selectedRivers');-->
+<!--//-->
+<!--//                 $("#xuncha").click(function(event) {-->
+<!--//                     back=1;-->
+<!--//                     window.location.href="patrolRivers.html";-->
+<!--//                 });-->
+<!--//                 location.reload();-->
+<!--//-->
+<!--//             }-->
+<!--//             else-->
+<!--//             {-->
+<!--//                 console.log("nono")-->
+<!--//                 $("#myPopup1").html(" <a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right\">关闭</a><h2 style=\"text-align:center;\">失败！</h2><p>" + result.message + "</p>")-->
+<!--//                 $("#myPopup1").popup('open');-->
+<!--//-->
+<!--//             }-->
+<!--//         },-->
+<!--//         error: function (XMLHttpRequest, textStatus, errorThrown) {-->
+<!--//             alert("失败！");-->
+<!--//         }-->
+<!--//     });-->
+<!--//-->
+<!--//-->
+<!--//-->
+<!--//-->
+<!--}-->
+<!--else {-->
+<!--alert('failed'+this.getStatus());-->
+<!--}-->
+<!--},{enableHighAccuracy: true})-->
+<!--}-->
+
+
+<!--</script>-->

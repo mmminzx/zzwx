@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8b3e40d-233a-4402-ac99-17cafcffdf90" name="Default" comment="" />
+    <ignored path="WEI 3.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="WEI 3" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ShuiZhi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhenze/ShuiZhi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2790">
+              <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+              <folding>
+                <marker date="1516157425000" expanded="true" signature="3207:3257" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="3439:3489" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="3718:3768" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="4004:4054" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="4298:4348" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="4593:4643" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="4890:4940" ph="..." />
+                <marker date="1516157425000" expanded="true" signature="5187:5271" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShuiZhi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/zhenze/ShuiZhi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entrance.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Entrance.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patrol.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/zhenze/patrol.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8630">
+              <caret line="969" column="19" selection-start-line="969" selection-start-column="19" selection-end-line="969" selection-end-column="19" />
+              <folding>
+                <marker date="1524730896987" expanded="true" signature="3417:3472" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="3545:3646" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="3676:3700" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="3761:3778" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="3832:3904" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4038:4093" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4162:4263" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4289:4313" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4367:4384" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4430:4502" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4636:4691" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4764:4865" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4895:4919" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="4981:4998" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5052:5124" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5266:5321" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5394:5484" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5514:5538" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5596:5613" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="5667:5739" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="9997:10015" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="18944:18962" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="25442:25460" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="32446:32464" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="36727:36745" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="39415:39433" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="42576:42594" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="43303:43321" ph="..." />
+                <marker date="1524730896987" expanded="true" signature="45981:45999" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangePwd.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/zhenze/ChangePwd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseInfomation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/zhenze/baseInfomation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <marker date="1510995209000" expanded="true" signature="1109:1173" ph="..." />
+                <marker date="1510995209000" expanded="true" signature="1220:1284" ph="..." />
+                <marker date="1510995209000" expanded="true" signature="1400:1464" ph="..." />
+                <marker date="1510995209000" expanded="true" signature="1579:1643" ph="..." />
+                <marker date="1510995209000" expanded="true" signature="5820:5884" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotoViewer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/zhenze/PhotoViewer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3555">
+              <caret line="237" column="13" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+              <folding>
+                <marker date="1512694210000" expanded="true" signature="1739:1882" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2059:2115" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2158:2191" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2231:2246" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2349:2388" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2643:2699" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2742:2775" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2815:2830" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="2933:2973" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="3221:3277" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="3320:3353" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="3393:3408" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="3511:3551" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="7888:8031" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="8822:8878" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="8929:8962" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9010:9025" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9144:9183" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9502:9558" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9609:9642" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9690:9705" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="9824:9864" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="10176:10232" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="10283:10316" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="10364:10379" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="10498:10538" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="12191:12334" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13124:13180" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13231:13264" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13312:13327" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13446:13485" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13804:13860" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13911:13944" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="13992:14007" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="14126:14166" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="14478:14534" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="14585:14618" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="14666:14681" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="14800:14840" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="16522:16665" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="16880:16936" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="16987:17020" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17068:17083" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17202:17241" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17560:17616" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17667:17700" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17748:17763" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="17882:17922" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="18234:18290" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="18341:18374" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="18422:18437" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="18556:18596" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="20218:20361" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="20576:20632" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="20683:20716" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="20764:20779" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="20898:20937" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="21256:21312" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="21363:21396" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="21444:21459" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="21578:21618" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="21930:21986" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="22037:22070" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="22118:22133" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="22252:22292" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="24547:24690" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="25480:25536" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="25587:25620" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="25668:25683" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="25802:25841" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26160:26216" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26267:26300" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26348:26363" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26482:26522" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26834:26890" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="26941:26974" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="27022:27037" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="27156:27196" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="28862:29005" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="29795:29851" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="29902:29935" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="29983:29998" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="30117:30156" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="30475:30531" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="30582:30615" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="30663:30678" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="30797:30837" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="31149:31205" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="31256:31289" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="31337:31352" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="31471:31511" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="33220:33363" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="33577:33633" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="33684:33717" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="33765:33780" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="33899:33938" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="34257:34313" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="34364:34397" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="34445:34460" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="34579:34619" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="34931:34987" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="35038:35071" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="35119:35134" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="35253:35293" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="36928:37071" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="37286:37342" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="37393:37426" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="37474:37489" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="37608:37647" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="37966:38022" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38073:38106" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38154:38169" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38288:38328" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38640:38696" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38747:38780" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38828:38843" ph="..." />
+                <marker date="1512694210000" expanded="true" signature="38962:39002" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotoViewer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhenze/PhotoViewer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5985">
+              <caret line="399" column="67" selection-start-line="399" selection-start-column="67" selection-end-line="399" selection-end-column="67" />
+              <folding>
+                <marker date="1512694558000" expanded="true" signature="4060:4203" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5172:5228" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5283:5316" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5368:5383" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5510:5549" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5880:5936" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="5991:6024" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6076:6091" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6218:6258" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6582:6638" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6693:6726" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6778:6793" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="6920:6960" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="9366:9509" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="10318:10374" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="10429:10462" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="10514:10529" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="10656:10695" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11026:11082" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11137:11170" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11222:11237" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11364:11404" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11728:11784" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11839:11872" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="11924:11939" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="12066:12106" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="14480:14623" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="15432:15488" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="15543:15576" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="15628:15643" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="15770:15809" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16140:16196" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16251:16284" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16336:16351" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16478:16518" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16842:16898" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="16953:16986" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="17038:17053" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="17180:17220" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="19595:19738" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="20548:20604" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="20659:20692" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="20744:20759" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="20886:20925" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="21256:21312" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="21367:21400" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="21452:21467" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="21594:21634" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="21958:22014" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="22069:22102" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="22154:22169" ph="..." />
+                <marker date="1512694558000" expanded="true" signature="22296:22336" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqplot.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhenze/jqplot.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqplot.json2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhenze/jqplot/plugins/jqplot.json2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="165" column="36" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>selectedtype</find>
+      <find>changetype</find>
+      <find>ziliaotype</find>
+      <find>base64</find>
+      <find>uploadFile</find>
+      <find>imageArr</find>
+      <find>dataURItoBlob</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/zhenze/SuperiorPush.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/Home.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyReconds.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/signList.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/selectRiver.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/layer_geoJson.js" />
+        <option value="$PROJECT_DIR$/zhenzePublic/publicSelectRiver.html" />
+        <option value="$PROJECT_DIR$/css/AddImage.css" />
+        <option value="$PROJECT_DIR$/js/zhenze/baseInfomation.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/patrolRecords.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyziliaoEdit.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/publicJS.js" />
+        <option value="$PROJECT_DIR$/zhenzePublic/publicBaseInfomation.html" />
+        <option value="$PROJECT_DIR$/js/public/publicBaseInfomation.js" />
+        <option value="$PROJECT_DIR$/js/public/publicSelectRiver.js" />
+        <option value="$PROJECT_DIR$/zhenze/Home.html" />
+        <option value="$PROJECT_DIR$/zhenzePublic/HomePublic.html" />
+        <option value="$PROJECT_DIR$/js/public/HomePublic.js" />
+        <option value="$PROJECT_DIR$/zhenzePublic/publicReport.html" />
+        <option value="$PROJECT_DIR$/js/public/publicReport.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/logIn.js" />
+        <option value="$PROJECT_DIR$/js/Entrance.js" />
+        <option value="$PROJECT_DIR$/zhenze/patrol.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyHistory.js" />
+        <option value="$PROJECT_DIR$/zhenze/Myhistory.html" />
+        <option value="$PROJECT_DIR$/photoTake.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/superiorPush.js" />
+        <option value="$PROJECT_DIR$/js/public/publicPhotoViewer.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/SuperiorPushDetail.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/PhotoViewer.js" />
+        <option value="$PROJECT_DIR$/zhenze/PhotoViewer.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyRecordDetail.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyworkPhoto.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyZiliao.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/MyDetailLiangdian.js" />
+        <option value="$PROJECT_DIR$/zhenze/NormalReport.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/NomalReport.js" />
+        <option value="$PROJECT_DIR$/zhenze/abnormalReported.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/suishoupai.js" />
+        <option value="$PROJECT_DIR$/zhenze/suishoupai.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/WorkPhoto.js" />
+        <option value="$PROJECT_DIR$/zhenze/WorkPhoto.html" />
+        <option value="$PROJECT_DIR$/zhenze/basicInformation.html" />
+        <option value="$PROJECT_DIR$/zhenzePublic/publicPhotoViewer.html" />
+        <option value="$PROJECT_DIR$/js/public/importRivers.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/abnormalReported.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/m_jqplot.js" />
+        <option value="$PROJECT_DIR$/js/zhenze/ShuiZhi.js" />
+        <option value="$PROJECT_DIR$/zhenze/ShuiZhi.html" />
+        <option value="$PROJECT_DIR$/Entrance.html" />
+        <option value="$PROJECT_DIR$/js/zhenze/patrol.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="134" />
+    <option name="y" value="23" />
+    <option name="width" value="1242" />
+    <option name="height" value="717" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhenzePublic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhenze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhenze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jqplot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhenze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zzwx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mancode/Desktop/震泽演示/zzwx/zhenze/WorkPhoto.html" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/zhenze" />
+      <recent name="$PROJECT_DIR$/js/zhenze" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/zhenze" />
+      <recent name="$PROJECT_DIR$/js/zhenze/jqplot" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/css/leaflet" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.abnormalReportedUpload.js">
+    <configuration default="false" name="logIn.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/震泽微信/zhenze/logIn.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="abnormalReportedUpload.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="abnormalReportedUpload.js" working-dir="$PROJECT_DIR$/js/zhenze">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.logIn.html" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.abnormalReportedUpload.js" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.abnormalReportedUpload.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.logIn.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8b3e40d-233a-4402-ac99-17cafcffdf90" name="Default" comment="" />
+      <created>1502440128461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1502440128461</updated>
+      <workItem from="1502440130130" duration="2389000" />
+      <workItem from="1502442828773" duration="16379000" />
+      <workItem from="1502520241566" duration="3711000" />
+      <workItem from="1502677045203" duration="9649000" />
+      <workItem from="1502758168899" duration="20741000" />
+      <workItem from="1502870872134" duration="891000" />
+      <workItem from="1502890436508" duration="13820000" />
+      <workItem from="1502953305124" duration="883000" />
+      <workItem from="1502954509427" duration="20490000" />
+      <workItem from="1502983959521" duration="12322000" />
+      <workItem from="1503017929635" duration="421000" />
+      <workItem from="1503019348647" duration="10622000" />
+      <workItem from="1503535516981" duration="10104000" />
+      <workItem from="1503622345669" duration="16612000" />
+      <workItem from="1503911837937" duration="94000" />
+      <workItem from="1503911969361" duration="164000" />
+      <workItem from="1503912165767" duration="1717000" />
+      <workItem from="1503968073561" duration="4424000" />
+      <workItem from="1503995548424" duration="27521000" />
+      <workItem from="1504228268290" duration="5238000" />
+      <workItem from="1504351071425" duration="3548000" />
+      <workItem from="1504574045754" duration="229000" />
+      <workItem from="1504574581305" duration="52008000" />
+      <workItem from="1504775760203" duration="2669000" />
+      <workItem from="1504788434114" duration="12548000" />
+      <workItem from="1504847928607" duration="5394000" />
+      <workItem from="1505113706809" duration="322000" />
+      <workItem from="1505120063870" duration="12968000" />
+      <workItem from="1505158165608" duration="39000" />
+      <workItem from="1505179840344" duration="63000" />
+      <workItem from="1505180003377" duration="56000" />
+      <workItem from="1505207417627" duration="200000" />
+      <workItem from="1505695527592" duration="869000" />
+      <workItem from="1505795080315" duration="4000" />
+      <workItem from="1505810410691" duration="16458000" />
+      <workItem from="1505928936234" duration="32000" />
+      <workItem from="1505928980333" duration="7417000" />
+      <workItem from="1505973436662" duration="2904000" />
+      <workItem from="1505977891069" duration="2605000" />
+      <workItem from="1505982593434" duration="19237000" />
+      <workItem from="1506302430549" duration="222000" />
+      <workItem from="1506319080352" duration="20451000" />
+      <workItem from="1506491036034" duration="55952000" />
+      <workItem from="1506631760406" duration="9214000" />
+      <workItem from="1506655079621" duration="5071000" />
+      <workItem from="1506665913676" duration="1103000" />
+      <workItem from="1507515143202" duration="6377000" />
+      <workItem from="1507535869374" duration="90679000" />
+      <workItem from="1507776022599" duration="59911000" />
+      <workItem from="1508148776705" duration="71611000" />
+      <workItem from="1508810429581" duration="54893000" />
+      <workItem from="1508947210903" duration="56559000" />
+      <workItem from="1509501929588" duration="25411000" />
+      <workItem from="1509881161667" duration="3015000" />
+      <workItem from="1509887174757" duration="2628000" />
+      <workItem from="1509889854196" duration="12727000" />
+      <workItem from="1509931171864" duration="20248000" />
+      <workItem from="1510108580640" duration="89673000" />
+      <workItem from="1510760457711" duration="75283000" />
+      <workItem from="1511401463458" duration="4150000" />
+      <workItem from="1511759569239" duration="1938000" />
+      <workItem from="1511773455119" duration="531000" />
+      <workItem from="1511775051933" duration="32242000" />
+      <workItem from="1512355181931" duration="17976000" />
+      <workItem from="1512630255120" duration="6508000" />
+      <workItem from="1512957308590" duration="1032000" />
+      <workItem from="1512960722594" duration="407000" />
+      <workItem from="1512966092319" duration="3781000" />
+      <workItem from="1513041670225" duration="2599000" />
+      <workItem from="1513645873625" duration="781000" />
+      <workItem from="1513674065485" duration="2401000" />
+      <workItem from="1513928634458" duration="59000" />
+      <workItem from="1514430640663" duration="1211000" />
+      <workItem from="1515140862300" duration="14008000" />
+      <workItem from="1515478107982" duration="132000" />
+      <workItem from="1515478331429" duration="629000" />
+      <workItem from="1515479061841" duration="4149000" />
+      <workItem from="1515574924934" duration="48000" />
+      <workItem from="1515735942950" duration="1980000" />
+      <workItem from="1515937156441" duration="945000" />
+      <workItem from="1516157250368" duration="292000" />
+      <workItem from="1517279369235" duration="1354000" />
+      <workItem from="1521593914302" duration="271000" />
+      <workItem from="1521595646677" duration="449000" />
+      <workItem from="1524727749423" duration="2304000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1080967000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="134" y="23" width="1242" height="717" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959743" sideWeight="0.48822606" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32253087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24870466" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702145" sideWeight="0.51177394" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24702145" sideWeight="0.48822606" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702145" sideWeight="0.51177394" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/zhenze/entrustRivers.js</url>
+          <line>511</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/zhenze/MyRecordDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/MyRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="97" selection-start-line="151" selection-start-column="95" selection-end-line="151" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoTake.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/publicSelectRiver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="185" column="9" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/Myhistory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="511" column="0" selection-start-line="499" selection-start-column="4" selection-end-line="511" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/superiorPush.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/SuperiorPushDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyworkPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="34" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyReconds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/SuperiorPushDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="119" column="34" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/NomalReportUpload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyRecordDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="196" column="58" selection-start-line="196" selection-start-column="58" selection-end-line="196" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyDetailLiangdian.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="737" column="17" selection-start-line="737" selection-start-column="17" selection-end-line="737" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/NomalReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1310">
+          <caret line="928" column="0" selection-start-line="928" selection-start-column="0" selection-end-line="928" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/suishoupai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="991">
+          <caret line="1236" column="0" selection-start-line="1236" selection-start-column="0" selection-end-line="1236" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/suishoupai.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="109" column="47" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/WorkPhoto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/abnormalReported.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="54" selection-start-line="3" selection-start-column="3" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/basicInformation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/publicPhotoViewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5730">
+          <caret line="382" column="54" selection-start-line="382" selection-start-column="28" selection-end-line="382" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenzePublic/publicPhotoViewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/NormalReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/publicJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding>
+            <marker date="1514430811000" expanded="true" signature="9481:9494" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/logIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/signList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/wantershishi.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/patrol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="133" column="131" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/selectRiver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="14" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/signList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/WorkPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="681" column="1" selection-start-line="681" selection-start-column="1" selection-end-line="681" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/HomePublic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/importRivers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/plan2018.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyZiliao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/abnormalReported.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/MyHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17595">
+          <caret line="1173" column="25" selection-start-line="1173" selection-start-column="25" selection-end-line="1173" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/jQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/m_jqplot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="165" column="3" selection-start-line="165" selection-start-column="3" selection-end-line="165" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public/publicBaseInfomation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="65" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/PhotoViewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3555">
+          <caret line="237" column="13" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+          <folding>
+            <marker date="1512694210000" expanded="true" signature="1739:1882" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2059:2115" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2158:2191" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2231:2246" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2349:2388" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2643:2699" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2742:2775" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2815:2830" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="2933:2973" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="3221:3277" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="3320:3353" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="3393:3408" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="3511:3551" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="7888:8031" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="8822:8878" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="8929:8962" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9010:9025" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9144:9183" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9502:9558" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9609:9642" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9690:9705" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="9824:9864" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="10176:10232" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="10283:10316" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="10364:10379" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="10498:10538" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="12191:12334" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13124:13180" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13231:13264" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13312:13327" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13446:13485" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13804:13860" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13911:13944" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="13992:14007" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="14126:14166" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="14478:14534" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="14585:14618" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="14666:14681" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="14800:14840" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="16522:16665" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="16880:16936" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="16987:17020" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17068:17083" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17202:17241" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17560:17616" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17667:17700" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17748:17763" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="17882:17922" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="18234:18290" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="18341:18374" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="18422:18437" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="18556:18596" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="20218:20361" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="20576:20632" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="20683:20716" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="20764:20779" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="20898:20937" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="21256:21312" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="21363:21396" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="21444:21459" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="21578:21618" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="21930:21986" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="22037:22070" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="22118:22133" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="22252:22292" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="24547:24690" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="25480:25536" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="25587:25620" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="25668:25683" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="25802:25841" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26160:26216" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26267:26300" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26348:26363" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26482:26522" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26834:26890" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="26941:26974" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="27022:27037" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="27156:27196" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="28862:29005" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="29795:29851" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="29902:29935" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="29983:29998" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="30117:30156" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="30475:30531" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="30582:30615" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="30663:30678" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="30797:30837" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="31149:31205" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="31256:31289" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="31337:31352" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="31471:31511" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="33220:33363" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="33577:33633" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="33684:33717" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="33765:33780" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="33899:33938" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="34257:34313" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="34364:34397" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="34445:34460" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="34579:34619" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="34931:34987" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="35038:35071" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="35119:35134" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="35253:35293" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="36928:37071" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="37286:37342" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="37393:37426" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="37474:37489" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="37608:37647" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="37966:38022" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38073:38106" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38154:38169" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38288:38328" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38640:38696" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38747:38780" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38828:38843" ph="..." />
+            <marker date="1512694210000" expanded="true" signature="38962:39002" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/PhotoViewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5985">
+          <caret line="399" column="67" selection-start-line="399" selection-start-column="67" selection-end-line="399" selection-end-column="67" />
+          <folding>
+            <marker date="1512694558000" expanded="true" signature="4060:4203" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5172:5228" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5283:5316" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5368:5383" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5510:5549" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5880:5936" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="5991:6024" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6076:6091" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6218:6258" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6582:6638" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6693:6726" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6778:6793" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="6920:6960" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="9366:9509" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="10318:10374" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="10429:10462" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="10514:10529" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="10656:10695" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11026:11082" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11137:11170" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11222:11237" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11364:11404" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11728:11784" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11839:11872" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="11924:11939" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="12066:12106" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="14480:14623" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="15432:15488" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="15543:15576" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="15628:15643" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="15770:15809" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16140:16196" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16251:16284" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16336:16351" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16478:16518" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16842:16898" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="16953:16986" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="17038:17053" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="17180:17220" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="19595:19738" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="20548:20604" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="20659:20692" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="20744:20759" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="20886:20925" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="21256:21312" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="21367:21400" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="21452:21467" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="21594:21634" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="21958:22014" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="22069:22102" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="22154:22169" ph="..." />
+            <marker date="1512694558000" expanded="true" signature="22296:22336" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/jqplot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/jqplot/plugins/jqplot.json2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="165" column="36" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/ChangePwd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/baseInfomation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <marker date="1510995209000" expanded="true" signature="1109:1173" ph="..." />
+            <marker date="1510995209000" expanded="true" signature="1220:1284" ph="..." />
+            <marker date="1510995209000" expanded="true" signature="1400:1464" ph="..." />
+            <marker date="1510995209000" expanded="true" signature="1579:1643" ph="..." />
+            <marker date="1510995209000" expanded="true" signature="5820:5884" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/ShuiZhi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhenze/ShuiZhi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding>
+            <marker date="1516157425000" expanded="true" signature="3207:3257" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="3439:3489" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="3718:3768" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="4004:4054" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="4298:4348" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="4593:4643" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="4890:4940" ph="..." />
+            <marker date="1516157425000" expanded="true" signature="5187:5271" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entrance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zhenze/patrol.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8630">
+          <caret line="969" column="19" selection-start-line="969" selection-start-column="19" selection-end-line="969" selection-end-column="19" />
+          <folding>
+            <marker date="1524730896987" expanded="true" signature="3417:3472" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="3545:3646" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="3676:3700" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="3761:3778" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="3832:3904" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4038:4093" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4162:4263" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4289:4313" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4367:4384" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4430:4502" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4636:4691" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4764:4865" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4895:4919" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="4981:4998" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5052:5124" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5266:5321" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5394:5484" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5514:5538" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5596:5613" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="5667:5739" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="9997:10015" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="18944:18962" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="25442:25460" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="32446:32464" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="36727:36745" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="39415:39433" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="42576:42594" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="43303:43321" ph="..." />
+            <marker date="1524730896987" expanded="true" signature="45981:45999" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

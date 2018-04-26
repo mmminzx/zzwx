@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公众上报</title>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <!--<script src="../js/zhenze/abnormalReported.js"></script>-->
+    <!--<script src="../js/zhenze/abnormalReportedUpload.js"></script>-->
+    <!--http://api.map.baidu.com/getscript?v=2.0&ak=Kpjp7jddqVUhWK5VkrfNt3YNezY88NtR&services=&t=20170517145936-->
+    <script src="../css/exif.js"></script>
+    <script src="../js/public/publicReport.js"></script>
+    <script src="../js/public/publicReportUpload.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .starts{
+            padding-left: 0px;
+            padding-top:20px;
+            width: 100%;
+            background-color: white;
+        }
+        .starts ul{
+            float:left;
+            background-color: white;
+        }
+        .starts ul li{
+            list-style: none;
+            /*width:32px;*/
+            /*height:21px;*/
+            width:50px;
+            height:50px;
+            float:left;
+            background:url(../images/stark2.png) no-repeat;
+
+        }
+        .starts ul li.on{
+            background:url(../images/stars2.png) no-repeat;
+        }
+        .starts ul span{
+            display:inline;
+            float:left;
+            padding-left:10px;
+            height:21px;
+            line-height:21px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+
+    <!--<label for="type">选择问题类型：</label>-->
+    <!--<select name="type" id="type" data-theme="f" onchange="changetype()">-->
+        <!--<option value="1">生活污水</option>-->
+        <!--<option value="2">工业问题</option>-->
+        <!--<option value="3">农业问题</option>-->
+        <!--<option value="4" >涉河违章</option>-->
+        <!--<option value="5">河道环境</option>-->
+        <!--<option value="6">水质感官异常</option>-->
+    <!--</select>-->
+    <!--</fieldset>-->
+    <!--&lt;!&ndash;紧急情况&ndash;&gt;-->
+
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+        <p>*最多上传3张图片</p>
+        <div class="z_photo">
+            <div class="z_file">
+                <input  type="file" accept="image/*" name="file" id="file" value=""  style="position: absolute;float:left; padding:0px; margin:0px;opacity: 0" onchange="imgChange('z_photo','z_file');" />
+
+            </div>
+
+        </div>
+        <label for="adress">地址：</label>
+        <textarea style="height:280px;" placeholder="输入大概位置描述。。。" id="adress"></textarea>
+        <label for="question">内容：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="question"></textarea>
+        <label >*提交时会上传当前定位。</label>
+        <button id="fileSubmit" data-theme="f">仅供参考</button>
+        <div id="detaildiv" style="width: 100%;"></div>
+        <button id="deailer" data-theme="f">实名上报</button>
+
+
+
+
+
+
+    </div>
+</div>
+<div id="allmap"></div>
+
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+
+
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+//            var mk = new BMap.Marker(r.point);
+//            map.addOverlay(mk);
+//            map.panTo(r.point);
+//            alert('您的位置：'+r.point.lng+','+r.point.lat);
+            lon=r.point.lng;
+            lat=r.point.lat;
+        }
+        else {
+            alert('failed'+this.getStatus());
+        }
+    },{enableHighAccuracy: true})
+    //关于状态码
+    //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+    //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+    //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+    //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+    //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+    //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+    //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+    //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+    //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+</script>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>资料积累修改</title>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/MyziliaoEdit.js"></script>
+
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .starts{
+            padding-left: 0px;
+            padding-top:20px;
+            width: 100%;
+            background-color: white;
+        }
+        .starts ul{
+            float:left;
+            background-color: white;
+        }
+        .starts ul li{
+            list-style: none;
+            /*width:32px;*/
+            /*height:21px;*/
+            width:20%;
+            height: 40px;;
+            float:left;
+            margin-left: 10%;
+            text-align:center;
+            background:url(../images/stark2.png) no-repeat;
+
+        }
+        .starts ul li.on{
+            background:url(../images/stars2.png) no-repeat;
+        }
+        .starts ul span{
+            display:inline;
+            float:left;
+            padding-left:40px;
+            height:21px;
+            line-height:21px;
+        }
+        .red{
+            color:red;
+        }
+        .menu
+        {
+            width: 25%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 18px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+        .div2{height:100%; width:100%; background: #fefefe; position:absolute; top:0px; left:0; z-index:2;display:none}
+        .div3{height:100%; width:100%; background:#fefefe; position:absolute; left:0; z-index:3;display:none}
+    </style>
+    <script>
+        function changeRiver() {
+            var objS = document.getElementById("selsectedRiver");
+            var type = objS.options[objS.selectedIndex].value;
+            riverId=totalRiver[type].OID;
+//
+            riverName=totalRiver[type].name;
+            console.log(riverId+riverName);
+
+        }
+        function changexiaqu() {
+            var objS = document.getElementById("xiaqu");
+            var type = objS.options[objS.selectedIndex].value;
+//            console.log(type);
+//            console.log(xaiquArr[type]);
+            villageCode=xaiquArr[type]['token'];
+            villageName=xaiquArr[type]['UserName'];
+            console.log(villageName+villageCode);
+
+
+        }
+        function changezilaiotype() {
+            var objS = document.getElementById("ziliaotype");
+            var type = objS.options[objS.selectedIndex].value;
+//            var seltype=jianyiArr[type][]
+            ziliaotype= $("#ziliaotype").find("option:selected").text();
+//            console.log(ziliaotype+type);
+            ziliaotypeid=typeArr[type]["Id"];
+            console.log(ziliaotype+ziliaotypeid);
+            $("#maincontent").html("");
+            if (type==0||type==1)
+            {
+                $("#maincontent").append('<label for="faname">'+"单位名称（"+'<span class="red">'+"*必填"+'</span>'+"）"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入内容。。。" id="faname">'
+                        +'<label for="pername">'+'姓名：'+'</label>'
+                        +'<input style="height:30px;" placeholder="输入姓名" id="pername">'+'<label for="phone">'+'电话：'+'</label>'+'<input style="height:30px;" placeholder="输入电话" id="phone">'
+                        +'<label for="address">'+'地址('+'<span class="red">'+'*必填'+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入地址" id="address">'
+                        +'<label for="signInTime">'+"大约成立时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="输入时间" id="signInTime">'
+                        +'<label for="distance">'+"排污口距河距离"+'<span class="red">'+"*必选"+'</span>'+'</label>'
+                        +'<input style="height:30px;" placeholder="输入距离" id="distance">'
+                        +'<label >'+"目前污水处理方式（"+'<span class="red">'+"*必选"+'</span>'+"）"+'</label>'
+                        +'<select name="type" id="ttype" data-theme="f" onchange="changetype()">'
+                        +'<option value="99" disabled selected value>'+"请点击选择处理方式"+'</option>'
+                        +'<option value="1">'+'未处理直排'+'</option>'
+                        +'<option value="2">'+"接管污水厂"+'</option>'
+                        +'<option value="3">'+"处理后直排"+'</option>'
+                        +'<option value="4" >'+'暂不清楚'+'</option>'
+                        +'</select>'
+                        +'</fieldset>'
+                ).trigger('create');
+            }
+            else if (type==2)
+            {
+                $("#maincontent").append('<label for="pername">'+'户主姓名：'+'</label>'
+                        +'<input style="height:30px;" placeholder="输入姓名" id="pername">'+'<label for="phone">'+'电话：'+'</label>'+'<input style="height:30px;" placeholder="输入电话" id="phone">'
+                        +'<label for="address">'+'地址('+'<span class="red">'+'*必填'+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入地址" id="address">'
+                        +'<label for="distance">'+"排污口距河距离"+'<span class="red">'+"*必选"+'</span>'+'</label>'
+                        +'<input style="height:30px;" placeholder="输入距离" id="distance">'
+                ).trigger('create');
+            }
+            else if (type==3)
+            {
+                $("#maincontent").append('<label for="address">'+'地址('+'<span class="red">'+'*必填'+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入地址" id="address">'
+                        +'<label for="distance">'+"排污口距河距离("+'<span class="red">'+"*必选"+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入距离" id="distance">'
+                ).trigger('create');
+            }
+            else if (type==4||type==5)
+            {
+                $("#maincontent").append('<label for="address">'+'地址('+'<span class="red">'+'*必填'+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入地址" id="address">'
+                ).trigger('create');
+            }
+            else if (type==6)
+            {
+                $("#maincontent").append('<label for="address">'+'地址('+'<span class="red">'+'*必填'+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入地址" id="address">'
+                        +'<label for="distance">'+"取水口距河距离("+'<span class="red">'+"*必选"+'</span>'+")"+'</label>'
+                        +'<input style="height:30px;" placeholder="输入距离" id="distance">'
+                ).trigger('create');
+            }
+
+        }
+        function changetypej() {
+            var objS = document.getElementById("jianyi");
+            var type = objS.options[objS.selectedIndex].value;
+//            var seltype=jianyiArr[type][]
+            processType= $("#jianyi").find("option:selected").text();
+            console.log(processType);
+
+        }
+        function changetype(){
+//            $("#content").html("");
+            var objS = document.getElementById("ttype");
+            var type = objS.options[objS.selectedIndex].value;
+            chulitype=$("#ttype").find("option:selected").text();
+
+
+        }
+    </script>
+    <script>
+        function selected1() {
+
+//            var obj = document.getElementById("p1");
+//            obj.style.cssText = "border-bottom: 2px solid black;";
+//
+//            var obj2 = document.getElementById("p2");
+//            obj2.style.cssText = "border-bottom: 0px solid black;";
+
+
+
+        }
+        function selected2() {
+
+
+        }
+        function selected3() {
+
+
+        }
+        function selected4() {
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="div2" id="rivers">
+    <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+    </ul>
+</div>
+<div class="div3" id="images">
+    <div style="width: 100%;height: 50px;text-align: center;font-size: 18px;line-height: 50px">
+        我的历史上传
+        <div onclick="hideImages()" id="close" style="width: 50px;height: 50px;float: right">
+            <img style="width: 50px;height: 50px" src="../images/close.png">
+        </div>
+    </div>
+    <div style="margin: 0 5px 0 5px" id="dddv" >
+
+        <script>
+            setTimeout(function () {
+//                var o=document.getElementById('images');//获得元素
+//                o.style.height=document.body.clientHeight+'px';
+                var o=document.getElementById('dddv');//获得元素
+                o.style.height=document.body.clientHeight-50+'px';
+            },100)
+        </script>
+        <div id="wrapper" style="observer:true;observeParents:true;height: 100%">
+            <div id="scroller">
+
+                <div id="pullDown">
+                    <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+                </div>
+
+                <ul id="imageslist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+
+
+
+                </ul>
+
+                <div id="pullUp">
+                    <span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+    <p>*上传图片（若是工业企业可连续上传：大门、车间、排污口等多张照片）</p>
+    <div class="z_photo">
+        <div class="z_file">
+            <input  type="file" name="file" id="file" value=""  style="position: absolute;float:left; padding:0px; margin:0px;opacity: 0" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+
+        </div>
+
+    </div>
+    <!--<label for="selectRiver">选择河湖（<span class="red">*必选</span>）：</label>-->
+    <!--<button id="selectRiver" data-theme="f">选择河湖</button>-->
+    <label for="selsectedRiver">选择河湖（<span class="red">*必选</span>）：</label>
+    <select name="type" id="selsectedRiver" data-theme="f" onchange="changeRiver()">
+        <option value="99" disabled selected value>请点击选择河湖</option>
+    </select>
+    </fieldset>
+    <label >点击选择资料类型（<span class="red">*必选</span>）：</label>
+    <select name="type" id="ziliaotype" data-theme="f" onchange="changezilaiotype()">
+        <option value="99" disabled selected value>请点击选择资料类型</option>
+        <!--<option value="1">工业企业</option>-->
+        <!--<option value="2">农业单位</option>-->
+        <!--<option value="3">居民住宅</option>-->
+        <!--<option value="4" >入河排口</option>-->
+        <!--<option value="5">水质感官</option>-->
+        <!--<option value="6">沿河环境</option>-->
+        <!--<option value="7">其他类型</option>-->
+        <!--<option value="8">其他类型</option>-->
+
+    </select>
+    </fieldset>
+    <div id="maincontent">
+        <label for="faname">单位名称（<span class="red">*必填</span>）：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="faname"></textarea>
+        <!--<label  style="text-align: center;font-size: 18px">法人（负责人）信息（*请尽可能填写）</label>-->
+        <label for="pername">姓名：</label>
+        <input type="text" style="height:30px;" placeholder="输入姓名" id="pername">
+        <label for="phone">电话：</label>
+        <input style="height:30px;" placeholder="输入电话" id="phone">
+        <label for="address">地址<span class="red">*必选</span>：</label>
+        <input style="height:30px;" placeholder="输入地址" id="address">
+        <label for="signInTime">大约成立时间：</label>
+        <input style="height:30px;" placeholder="输入时间" id="signInTime">
+        <label for="distance">排污口距河距离<span class="red">*必选</span>：</label>
+        <input style="height:30px;" placeholder="输入距离" id="distance">
+        <label >目前污水处理方式（<span class="red">*必选</span>）：</label>
+        <select name="type" id="ttype" data-theme="f" onchange="changetype()">
+            <option value="99" disabled selected value>请点击选择处理方式</option>
+            <option value="1">未处理直排</option>
+            <option value="2">接管污水厂</option>
+            <option value="3">处理后直排</option>
+            <option value="4" >暂不清楚</option>
+
+        </select>
+        </fieldset>
+    </div>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+
+        <select name="type" id="xiaqu" data-theme="f" onchange="changexiaqu()">
+            <option value="99" disabled selected value>请点击选择所属辖区</option>
+
+        </select>
+        </fieldset>
+        <br>
+        <!--<label >*提交时会上传当前定位。</label>-->
+        <button id="fileSubmit" data-theme="f">提交</button>
+        <div style="margin-top: 40px;width: 100px;height: 30px;color: cornflowerblue" onclick="histroy()">我的历史上传</div>
+
+
+
+
+    </div>
+</div>
+
+<div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+
+</html>
+<!--<script type="text/javascript">-->
+<!--// 百度地图API功能-->
+<!--var map = new BMap.Map("allmap");-->
+<!--var point = new BMap.Point(116.331398,39.897445);-->
+<!--map.centerAndZoom(point,12);-->
+
+<!--var geolocation = new BMap.Geolocation();-->
+<!--geolocation.getCurrentPosition(function(r){-->
+<!--if(this.getStatus() == BMAP_STATUS_SUCCESS){-->
+<!--//            var mk = new BMap.Marker(r.point);-->
+<!--//            map.addOverlay(mk);-->
+<!--//            map.panTo(r.point);-->
+<!--var temp=bd09togcj02(r.point.lng,r.point.lat);-->
+<!--var newloc=gcj02towgs84(temp[0],temp[1]);-->
+
+<!--//            30.9124371686,120.5094498200-->
+<!--lon=newloc[0];-->
+<!--lat=newloc[1];-->
+<!--}-->
+<!--else {-->
+<!--alert('failed'+this.getStatus());-->
+<!--}-->
+<!--},{enableHighAccuracy: true})-->
+<!--//    //关于状态码-->
+<!--//    //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。-->
+<!--//    //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。-->
+<!--//    //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。-->
+<!--//    //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。-->
+<!--//    //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。-->
+<!--//    //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。-->
+<!--//    //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)-->
+<!--//    //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)-->
+<!--//    //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)-->
+<!--//    function bd09togcj02(bd_lon, bd_lat) {-->
+<!--//        var x_pi = 3.14159265358979324 * 3000.0 / 180.0;-->
+<!--//        var x = bd_lon - 0.0065;-->
+<!--//        var y = bd_lat - 0.006;-->
+<!--//        var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * x_pi);-->
+<!--//        var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * x_pi);-->
+<!--//        var gg_lng = z * Math.cos(theta);-->
+<!--//        var gg_lat = z * Math.sin(theta);-->
+<!--//        return [gg_lng, gg_lat]-->
+<!--//    }-->
+<!--</script>-->
+<script>
+    function histroy() {
+        var  token=$.cookie('zzwxToken');
+        $.ajax({
+            type: "get",
+            url: svc_own + "Ashx_Enterprise.ashx",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
+                method: "getEnterprisePageList",
+                token:token,
+                page:1,
+                pageSize:6,
+
+            },
+            success: function (result) {
+                console.log(result.rows);
+                var arr=result.rows;
+
+                // console.log("asdadas"+arr.length);
+                for (var i=0;i<arr.length;i++)
+                {
+                    var Data=arr[i];
+                    strs=Data.imgs.split(",");
+                    var imagestr="";
+                    if (strs.length>0)
+                    {
+                        imagestr='<img src="'+strs[0]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+                        if(strs.length>1)
+                        {
+                            for (var jk=1;jk<strs.length;jk++)
+                            {
+                                imagestr=imagestr+'<img src="'+strs[jk]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+
+
+
+                            }
+
+                        }
+
+                        console.log(imagestr);
+                    }
+
+
+                    // console.log("asdadas");
+
+                    $("#imageslist").append(imagestr
+                    );
+
+
+                }
+
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取数据失败！");
+            }
+        });
+        var obj2 = document.getElementById("images");
+        obj2.style.cssText = "display:block";
+        window.scrollTo(0,0);
+    }
+</script>

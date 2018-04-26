@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+
+    <title>上传记录</title>
+    <style>
+        .menu
+        {
+            width: 50%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 20px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function liclick() {
+            window.location.href="MyRecordDetail.html";
+        }
+
+    </script>
+    <script>
+        function selected1() {
+
+            var obj = document.getElementById("p1");
+            obj.style.cssText = "border-bottom: 2px solid black;";
+
+            var obj2 = document.getElementById("p2");
+            obj2.style.cssText = "border-bottom: 0px solid black;";
+
+
+            $("#thelist").html("");
+            $("#thelist").append( '<li onclick="liclick()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报类型：异常上报"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"河道名称：快鸭港"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"主要内容：有人违章排污"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报时间：2017.6.15"+'</p>'
+                    +'</li>'
+                    +'<li onclick="liclick()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报类型：异常上报"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"河道名称：长漾"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"主要内容：水面漂浮物严重"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报时间：2017.6.15"+'</p>'
+                    +'</li>'
+                    +'<li onclick="liclick()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报类型：异常上报"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"河道名称：划船港"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"主要内容：河水污染"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报时间：2017.6.15"+'</p>'
+                    +'</li>');
+        }
+        function selected2() {
+
+            var obj = document.getElementById("p1");
+            obj.style.cssText = "border-bottom: 0px solid black;";
+
+            var obj2 = document.getElementById("p2");
+            obj2.style.cssText = "border-bottom: 2px solid black;";
+
+
+
+
+            $("#thelist").html("");
+            $("#thelist").append( '<li onclick="liclick()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报类型：正常上报"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"河道名称：快鸭港"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"主要内容：规范排污"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报时间：2017.6.15"+'</p>'
+                    +'</li>'
+                    +'<li onclick="liclick()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报类型：正常上报"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"河道名称：长漾"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"主要内容：风景优美"+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"上报时间：2017.6.15"+'</p>'
+                    +'</li>');
+
+
+
+        }
+
+    </script>
+
+    <script src="../js/zhenze/signList.js"></script>
+    <script>
+        function addphoto() {
+//            console.log(toals);
+            localStorage.totalsSign= JSON.stringify(toals);
+            window.location.href="patrolRecords.html";
+        }
+    </script>
+    <!--<script src="../js/zhenze/MyReconds.js"></script>-->
+</head>
+<body>
+<!--<div  style="width: 100%;height: 50px">-->
+<!--<div class="menu"  onclick="selected1()">-->
+<!--<p class="pstyle" id="p1" style=" border-bottom: 2px solid black;">未处理</p>-->
+<!--</div>-->
+<!--<div class="menu" id="p2" onclick="selected2()">-->
+<!--<p class="pstyle" >处理中</p>-->
+<!--</div>-->
+<!--</div>-->
+<div data-role="header" data-theme="f">
+
+    <h1 id="demo">上传记录</h1>
+    <a  class="ui-btn ui-btn-right ui-shadow ui-icon-arrow-r ui-btn-icon-left"  onclick="addphoto()">地图</a>
+</div>
+<div style="margin: 0 5px 0 5px" id="dddv" >
+
+    <script>
+        setTimeout(function () {
+            var o=document.getElementById('dddv');//获得元素
+            o.style.height=document.body.clientHeight+'px';
+        },100)
+    </script>
+    <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px;margin-top: 20px">
+
+    </ul>
+    <!--<div id="wrapper" style="observer:true;observeParents:true;height: 100%">-->
+        <!--<div id="scroller">-->
+            <!--<div id="pullDown">-->
+                <!--<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>-->
+            <!--</div>-->
+
+
+            <!---->
+
+            <!--<div id="pullUp">-->
+                <!--<span class="pullUpIcon"></span><span class="pullUpLabel"></span>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+</div>
+</body>
+
+</html>

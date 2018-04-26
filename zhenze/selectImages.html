@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title>民情日志</title>-->
+    <script src="../js/zhenze/publicJS.js"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+
+    <style>
+        html,body
+        {
+            height: 100%;
+
+        }
+
+        .img {
+            margin-top: 8px;
+        }
+
+        body {
+            font-weight: 500;
+            font-family: 'Microsoft YaHei';
+        }
+        .menu
+        {
+            width: 100%;
+
+
+        }
+        .btn1
+        {
+            width: 33%;
+            height: 33vw;
+            /*background-color: #00a2d4;*/
+            text-align: center;
+            float: left;
+        }
+        .title
+        {
+            width: 100%;
+            text-align: center;
+            margin-top: 75%;
+            height: 16px;
+            /*background-color: rgba(255, 59, 105, 0.78);*/
+
+        }
+        .imageDiv
+        {
+            width: 100%;
+            height: 75%;
+
+        }
+
+        a:link {
+            text-decoration:none;
+            color:black;
+        }
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script>
+        function click1(n) {
+//            console.log("selectRiver.html?"+"type="+n);
+
+            if (n=="1")
+            {
+                localStorage.removeItem('patrolStatus');
+                window.location.href="patrol.html";
+
+            }
+            else  if (n=="2")
+            {
+                window.location.href="patrol.html";
+
+            }
+            else
+            {
+                window.location.href="selectRiver.html?"+"type="+n;
+
+            }
+        }
+
+    </script>
+    <script src="../js/zhenze/selectImages.js"></script>
+    <script>
+        function clic123k() {
+            localStorage.suishoupaipic = "../images/处理后照片.png";
+            console.log("sss");
+            window.history.back();return false;
+        }
+    </script>
+</head>
+<body>
+
+<select name="type" id="type" data-theme="f" onchange="changetype()">
+    <!--<option disabled selected value>请选择类型</option>-->
+    <option value="1">快鸭港</option>
+    <option value="2">长漾</option>
+    <option value="3">北麻漾</option>
+    <option value="4" >荡湾里</option>
+    <option value="5">开发区河</option>
+    <option value="6">梅家坟</option>
+</select>
+</fieldset>
+<div style="height: 90%" >
+    <div  style="width: 90%;height: 90%;margin-left: 5%">
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/污染图片1.png')">
+                <!--<div style="width: 32px;height: 32px;background-image: url('../images/选中图片.png')">-->
+
+
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div style="width: 50%;height: 50vw;float: left;" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片.png')">
+
+            </div>
+
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片2.png')">
+
+
+            </div>
+        </div>
+
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/污染图片1.png')">
+                <!--<div style="width: 32px;height: 32px;background-image: url('../images/选中图片.png')">-->
+
+
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div style="width: 50%;height: 50vw;float: left;" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片.png')">
+
+            </div>
+
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片2.png')">
+
+
+            </div>
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/污染图片1.png')">
+                <!--<div style="width: 32px;height: 32px;background-image: url('../images/选中图片.png')">-->
+
+
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div style="width: 50%;height: 50vw;float: left;" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片.png')">
+
+            </div>
+
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片2.png')">
+
+
+            </div>
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/污染图片1.png')">
+                <!--<div style="width: 32px;height: 32px;background-image: url('../images/选中图片.png')">-->
+
+
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div style="width: 50%;height: 50vw;float: left;" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片.png')">
+
+            </div>
+
+        </div>
+        <div style="width: 50%;height: 50vw;float: left" onclick="clic123k()">
+            <div  style="width: 90%;height: 90%;margin: 5% 5% 5% 5%;background-image: url('../images/处理后照片2.png')">
+
+
+            </div>
+        </div>
+    <!--div{position:fixed;bottom:0px;}-->
+    <!--<div  id="sureBtn" style="width: 95%;height: 30px;background-color: #3497d9;bottom:10px;margin-left: 0px;position:fixed;text-align: center;font-size: 20px;color: whitesmoke " >-->
+        <!--确定-->
+    <!--</div>-->
+
+
+
+</body>
+
+</html>

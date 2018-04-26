@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>基本信息</title>
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script src="../js/public/publicBaseInfomation.js"></script>
+
+    <script>
+        function picture() {
+            window.location.href="publicPhotoViewer.html";
+        }
+    </script>
+</head>
+<body>
+<div style="text-align: center;width: 100%;height: 30px;background-color: #e4e4e4">
+
+    <label style="width: 100%;height: 30px;line-height: 30px;text-align: center;font-size: 18px;;color: #000000">河湖基本资料</label>
+</div>
+<div style="width: 90%;margin-top: 20px;margin-left: 5%; ">
+
+    <p id="name" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">河道名称：快鸭港</p>
+    <div id="hezhang1" style="width: 100%;"></div>
+    <p id="hezhang" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">负  责  人 ：小港上</p>
+
+    <p id="start" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">起          点：波斯港</p>
+    <p id="end" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">止          点：大德塘</p>
+    <p id="long" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">长度（KM）：0.4</p>
+    <p id="involve" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">涉及：大德塘</p>
+    <p id="remarks" style="color: #333333;font-size: 18px;margin-left: 0px;text-align: left">备注：大德塘</p>
+
+</div>
+
+<!--<div style="text-align: center;width: 100%;height: 30px;background-color: #e4e4e4">-->
+
+<!--<label style="width: 100%;height: 30px;line-height: 30px;text-align: center;font-size: 18px;;color: #000000">河长工作照片</label>-->
+<!--</div>-->
+<!--<div id="workphoto">-->
+
+<!--</div>-->
+<!--<div style="text-align: center;width: 100%;height: 30px;background-color: #e4e4e4">-->
+
+<!--<label style="width: 100%;height: 30px;line-height: 30px;text-align: center;font-size: 18px;;color: #000000">河湖风光</label>-->
+<!--</div>-->
+<div id="fengguang">
+</div>
+<div style="text-align: center;width: 100%;height: 30px;background-color: #e4e4e4">
+    <label style="width: 100%;height: 30px;line-height: 30px;text-align: center;font-size: 18px;;color: #000000">问题处理情况</label>
+</div>
+<div style="margin-left: 10px" id="questions">
+</div>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+    <button id="selectRiver" data-theme="f" data-icon="arrow-r" data-iconpos="right" onclick="picture()" >图片</button>
+</div>
+
+<div  data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+<!--<script type="text/javascript">-->
+<!---->
+<!--navigator.geolocation.getCurrentPosition(function(position){-->
+
+<!--console.log(position);-->
+
+<!--});-->
+<!--</script>-->
+</html>

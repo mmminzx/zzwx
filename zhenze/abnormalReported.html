@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>异常上报</title>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/abnormalReported.js"></script>
+    <script src="../js/zhenze/abnormalReportedUpload.js"></script>
+
+
+    <style>
+        html,body{
+            height:100%;
+            width:100%;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        .starts{
+            padding-left: 0px;
+            padding-top:20px;
+            width: 100%;
+            background-color: white;
+        }
+        .starts ul{
+            float:left;
+            background-color: white;
+        }
+        .starts ul li{
+            list-style: none;
+            /*width:32px;*/
+            /*height:21px;*/
+            width:20%;
+            height: 40px;;
+            float:left;
+            margin-left: 10%;
+            text-align:center;
+            background:url(../images/stark2.png) no-repeat;
+
+        }
+        .starts ul li.on{
+            background:url(../images/stars2.png) no-repeat;
+        }
+        .starts ul span{
+            display:inline;
+            float:left;
+            padding-left:40px;
+            height:21px;
+            line-height:21px;
+        }
+        .red{
+            color:red;
+        }
+        .menu
+        {
+            width: 25%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 18px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+        .div2{height:100%; width:100%; background: #fefefe; position:absolute; top:0px; left:0; z-index:2;display:none}
+        .div3{height: 100%; width:100%; background:#fefefe; position:absolute; left:0; z-index:3;display:none}
+    </style>
+    <script>
+        function changeRiver() {
+            var objS = document.getElementById("selsectedRiver");
+            var type = objS.options[objS.selectedIndex].value;
+            riverId=totalRiver[type].OID;
+//
+            riverName=totalRiver[type].name;
+            UPloadShequ(totalRiver[type].name);
+            console.log(riverId+riverName);
+
+        }
+        function changeshijian() {
+            var objS = document.getElementById("shijian");
+            var type = objS.options[objS.selectedIndex].value;
+//            var seltype=jianyiArr[type][]
+            processTime= $("#shijian").find("option:selected").text();
+            console.log(processTime);
+            var Days=0;
+            if (processTime=="一周")
+            {
+                Days=7;
+            }
+            else if (processTime=="半个月")
+            {
+                Days=16;
+            }
+            else if (processTime=="一个月")
+            {
+                Days=31;
+            }
+            else if (processTime=="三个月")
+            {
+                Days=92;
+            }
+            else if (processTime=="半年")
+            {
+                Days=183;
+            }
+            else if (processTime=="一年")
+            {
+                Days=365;
+            }
+            else if (processTime=="一年以上")
+            {
+                Days=366;
+            }
+            var holiday= ['2015-01-01','2015-01-02','2015-01-03','2015-01-08'];
+            var holidayMap={};
+            function getMap(hd){
+                for(var i=0;i<hd.length;i++){
+                    holidayMap[hd[i]]='1';
+                }
+            }
+            function formatTen(f){
+                if (parseInt(f,10)<10){
+                    return '0'+f;
+                }
+                return f;
+            }
+            function formateDate(date){
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                return year + "-" + formatTen(month) + "-" + formatTen(day);
+            }
+            function getworkday(dat,itervalByDay){
+                var str=dat.split("-");
+                var date=new Date();
+                date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+                date.setUTCHours(0, 0, 0, 0);
+                var millisceonds =date.getTime();
+                for(var i=1;i<=itervalByDay;i++){
+                    millisceonds +=24*60*60*1000;
+                    date.setTime(millisceonds);
+
+                    if(date.getDay()==0||date.getDay()==6){
+                        i--;
+                    }else{//过滤节假日
+                        var d=formateDate(date);
+                        if(holidayMap[d]){
+                            i--;
+                        }
+                    }
+                }
+
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                var rq = year + "-" + formatTen(month) + "-" + formatTen(day);
+
+                return rq;
+            }
+            getMap(holiday);
+            var d = new Date();
+            var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+//            alert(str)
+            var r = getworkday(str,Days);
+//            console.log(r)
+            processDateTime=r;
+
+//            alert(r);
+
+        }
+        function changexiaqu() {
+            var objS = document.getElementById("xiaqu");
+            var type = objS.options[objS.selectedIndex].value;
+//            console.log(type);
+//            console.log(xaiquArr[type]);
+            villageCode=xaiquArr[type]['id'];
+            villageName=xaiquArr[type]['name'];
+            console.log(villageName+villageCode);
+//            var seltype=jianyiArr[type][]
+//            processTime= $("#jianyi").find("option:selected").text();
+//            console.log(processType);
+
+        }
+        function changetypej() {
+            var objS = document.getElementById("jianyi");
+            var type = objS.options[objS.selectedIndex].value;
+//            var seltype=jianyiArr[type][]
+            console.log(type);
+            processTypeName= $("#jianyi").find("option:selected").text();
+            processType=jianyiArr[type]['Id'];
+            console.log(processType);
+
+        }
+        function changetype(){
+//            $("#content").html("");
+            var objS = document.getElementById("type");
+            var type = objS.options[objS.selectedIndex].value;
+            selectedtypeName=$("#type").find("option:selected").text();
+            if (type==1)
+            {
+                selectedtype = 11303;
+                getJianyi(117);
+
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+
+            }
+            else if (type==2)
+            {
+                selectedtype = 11301;
+                getJianyi(115);
+//                $("#content").append('<br>'
+//                        +'<p>'+"*工业问题需上传以下照片"+'</p>'+'<div style="display: flex;width: 100%;height: 40px;background-color: white;margin-top: 20px">'
+//                        +'<label style="margin:auto;margin-left: 0px">'+"企业照片、车间照片、企业内排污口照片、污水入河照片。"+'</label>'
+//                    +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"车间照片："+'</label>'
+////            +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"企业内排污口照片："+'</label>'
+////            +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"污水入河照片："+'</label>'
+////            +'</div>'
+//                        +'<div id="zyupload" class="zyupload">'+'</div>'
+//                        +'<label for="question">'+"内容："+'</label>'
+//            +'<textarea style="height:280px;" placeholder="输入内容。。。" id="question">'+'</textarea>'
+//                    +'<label >'+"*提交时会上传当前定位。"+'</label>'
+//            +'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1()
+
+            }
+            else if (type==3)
+            {
+                selectedtype = 11302;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(115);
+            }
+            else if (type==4)
+            {
+                selectedtype = 11304;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(118);
+            }
+            else if (type==5)
+            {
+                selectedtype = 11305;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(119);
+            }
+            else if (type==6)
+            {
+                selectedtype = 11306;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(120);
+            }
+            else if (type==7)
+            {
+                $("#content").append('<label for="OrganizationName">'+"受检单位："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位名称" id="OrganizationName">'+'<label for="adress">'+"单位地址："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位地址" id="adress">'+'<label for="time">'+"检查时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="检查时间" id="time">'+'<label for="name">'+"单位联系人："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位联系人" id="name">'+'<label for="AttendName">'+"参与检查人员："+'</label>'
+                        +'<textarea  placeholder="输入参与检查人员姓名" id="AttendName">'+'</textarea>'
+                        +'<label >'+"发现问题:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<label for="Request">'+"整改情况："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="Request">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+
+        }
+    </script>
+    <script>
+        function selected1() {
+
+//            window.location.href="abnormalReported.html";
+
+
+        }
+        function selected2() {
+            var pagenum= $.cookie('zzwxpage');
+            pagenum++;
+            $.cookie('zzwxpage', pagenum);
+            window.location.href="NormalReport.html";
+
+
+        }
+        function selected3() {
+            var pagenum= $.cookie('zzwxpage');
+            pagenum++;
+            $.cookie('zzwxpage', pagenum);
+            window.location.href="WorkPhoto.html";
+        }
+        function selected4() {
+            var pagenum= $.cookie('zzwxpage');
+            pagenum++;
+            $.cookie('zzwxpage', pagenum);
+            window.location.href="suishoupai.html";
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="div3" id="images">
+    <div style="width: 100%;height: 50px;text-align: center;font-size: 18px;line-height: 50px">
+        我的历史上传
+        <div onclick="hideImages()" id="close" style="width: 50px;height: 50px;float: right">
+            <img style="width: 50px;height: 50px" src="../images/close.png">
+        </div>
+    </div>
+    <div style="margin: 0 5px 0 5px" id="dddv" >
+
+        <script>
+            setTimeout(function () {
+//                var o=document.getElementById('dddv');//获得元素
+//                o.style.height=document.body.clientHeight+'px';
+            },100)
+        </script>
+        <div id="wrapper" style="observer:true;observeParents:true;height: 100%">
+            <div id="scroller">
+
+                <div id="pullDown">
+                    <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+                </div>
+
+                <ul id="imageslist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+
+
+
+                </ul>
+
+                <div id="pullUp">
+                    <span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  style="width: 100%;height: 50px">
+    <div class="menu"  onclick="selected1()">
+        <p class="pstyle" id="p1" style=" border-bottom: 2px solid black;">异常上报</p>
+    </div>
+    <div class="menu"  onclick="selected2()">
+        <p class="pstyle" id="p2">亮点推送</p>
+    </div>
+    <div class="menu"  onclick="selected3()">
+        <p class="pstyle" id="p3">工作照片</p>
+    </div>
+    <div class="menu"  onclick="selected4()">
+        <p class="pstyle" id="p4">资料积累</p>
+    </div>
+</div>
+<div class="div2" id="rivers">
+    <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+    </ul>
+</div>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+    <p>*上传图片</p>
+    <div class="z_photo">
+        <div class="z_file" id="adddiv">
+            <input  type="file" accept="image/*" name="file" id="file" value=""  style="position: absolute;float:left; padding:0px; margin:0px;opacity: 0" onchange="imgChange('z_photo','z_file');" />
+        </div>
+    </div>
+    <!--<label for="type">选择河湖（<span class="red">*必选</span>）：</label>-->
+    <!--<button id="selectRiver" data-theme="f">选择河湖</button>-->
+    <label for="selsectedRiver">选择河湖（<span class="red">*必选</span>）：</label>
+    <select name="type" id="selsectedRiver" data-theme="f" onchange="changeRiver()">
+        <option value="99" disabled selected value>请点击选择河湖</option>
+    </select>
+    </fieldset>
+    <label for="type">选择问题类型（<span class="red">*必选</span>）：</label>
+    <select name="type" id="type" data-theme="f" onchange="changetype()">
+        <option value="99" disabled selected value>请点击选择类型</option>
+        <option value="1">生活污水</option>
+        <option value="2">工业问题</option>
+        <option value="3">农业问题</option>
+        <option value="4" >涉河违章</option>
+        <option value="5">河道环境</option>
+        <option value="6">水质感官异常</option>
+    </select>
+    </fieldset>
+    <!--紧急情况-->
+    <label for="type">选择紧急情况：</label>
+    <div class="starts">
+        <ul id = "pingStar" style="width: 100%;height: 40px">
+            <li rel = "1" title = "特别差，给1分"></li>
+            <li rel = "2" title = "很差，给2分"></li>
+            <li rel = "3" title = "一般，给3分"></li>
+            <span id="dir"></span>
+        </ul>
+        <input type="hidden" value="" id = "startP" />
+    </div>
+    <script>
+        window.onload = function(){
+            var s = document.getElementById("pingStar");
+            m = document.getElementById("dir"),
+                    n = s.getElementsByTagName("li"),
+                    input = document.getElementById("startP");//保存所选值
+            clearAll = function(){
+                for(var i = 0;i < n.length;i++){
+                    n[i].className = "";
+                }
+            }
+            for(var i = 0;i < n.length;i++){
+                n[i].onclick = function(){
+                    var q = this.getAttribute("rel");
+                    var  alertstr="";
+                    if (q=="1")
+                    {
+                        emergency=1;
+                        alertstr="1颗星的问题将被推送到大联动中心";
+
+                    }
+                    else if(q=="2" )
+                    {
+                        emergency=2;
+                        alertstr="2颗星的问题将被推送到村（社区负责人）、大联动中心";
+
+
+                    }
+                    else if(q=="3" )
+                    {
+                        emergency=3;
+                        alertstr="3颗星的问题将被推送到镇相关分管领导、村（社区）负责人、大联动中心";
+
+
+                    }
+
+
+                    bool=false;
+                    setTimeout(function(){
+                        $("#myPopup1").popup('close');
+                        bool=true;
+                        console.log(bool);
+                    },1500);
+                    console.log(bool);
+//                    $("#myPopup1").html(" <a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right\">关闭</a><h2 style=\"text-align:center;\">获取数据失败！</h2><p>" + result.message + "</p>")
+//                    $("#myPopup1").html(" <a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right\">关闭</a><p>"+alertstr+"</p>")
+//                    $("#myPopup1").popup('open');
+                    alert(alertstr);
+                    clearAll();
+                    input.value = q;
+                    for(var i = 0;i < q;i++){
+                        n[i].className = "on";
+                    }
+//                    m.innerHTML = this.getAttribute("title");
+                }
+                n[i].onmouseover = function(){
+                    var q = this.getAttribute("rel");
+                    clearAll();
+                    for(var i = 0;i < q;i++){
+                        n[i].className = "on";
+                    }
+//                    m.innerHTML = this.getAttribute("title");
+                }
+                n[i].onmouseout = function(){
+                    clearAll();
+                    for(var i = 0;i < input.value;i++){
+                        n[i].className = "on";
+                    }
+
+                }
+            }
+        }
+
+    </script>
+
+    <br>
+    <br>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+
+
+
+        <label for="question">补充说明（可不填）：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="question"></textarea>
+        <label for="type">建议处理方式（<span class="red">*必选</span>）：</label>
+        <select name="type" id="jianyi" data-theme="f" onchange="changetypej()">
+            <option value="99" disabled selected value>请点击选择处理方式</option>
+            <!--<option value="1">生活污水</option>-->
+            <!--<option value="2">工业问题</option>-->
+            <!--<option value="3">农业问题</option>-->
+            <!--<option value="4" >涉河违章</option>-->
+            <!--<option value="5">河道环境</option>-->
+            <!--<option value="6">水质感官异常</option>-->
+        </select>
+        </fieldset>
+        <label for="type">建议处理时间（<span class="red">*必选</span>）：</label>
+        <select name="type" id="shijian" data-theme="f" onchange="changeshijian()">
+            <option value="99" disabled selected value>请点击选择处理时间</option>
+            <option value="1">一周</option>
+            <option value="2">半个月</option>
+            <option value="3">一个月</option>
+            <option value="4" >三个月</option>
+            <option value="5">半年</option>
+            <option value="6">一年</option>
+            <option value="6">一年以上</option>
+        </select>
+        </fieldset>
+        <label for="type">所属辖区（<span class="red">*必选</span>）：</label>
+        <select name="type" id="xiaqu" data-theme="f" onchange="changexiaqu()">
+            <option value="99" disabled selected value>请点击选择所属辖区</option>
+
+        </select>
+        </fieldset>
+        <label >*提交时会上传当前定位。</label>
+        <button id="fileSubmit" data-theme="f">提交</button>
+        <div style="margin-top: 40px;width: 100px;height: 30px;color: cornflowerblue" onclick="histroy()">我的历史上传</div>
+
+
+
+
+    </div>
+</div>
+
+<div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+//            var mk = new BMap.Marker(r.point);
+//            map.addOverlay(mk);
+//            map.panTo(r.point);
+            var temp=bd09togcj02(r.point.lng,r.point.lat);
+            var newloc=gcj02towgs84(temp[0],temp[1]);
+
+//            30.9124371686,120.5094498200
+            lon=newloc[0];
+            lat=newloc[1];
+        }
+        else {
+            alert('failed'+this.getStatus());
+        }
+    },{enableHighAccuracy: true})
+
+</script>
+<script>
+    function histroy() {
+        showHistory=2;
+        $("#imageslist").html("");
+        console.log(showHistory);
+        var  token=$.cookie('zzwxToken');
+
+        $.ajax({
+            type: "get",
+            url: svc_own + "Ashx_Question.ashx",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
+                method: "getReportQuestionPageList",
+                token:token,
+                qType:2,
+                page:1,
+                pageSize:99,
+
+            },
+            success: function (result) {
+                console.log(result);
+                var arr=result.rows;
+
+                // console.log("asdadas"+arr.length);
+                for (var i=0;i<arr.length;i++)
+                {
+                    var Data=arr[i];
+                    strs=Data.imgs.split(",");
+                    var imagestr="";
+//                    if (strs.length>0)
+//                    {
+//                        imagestr='<img src="'+strs[0]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+//                        if(strs.length>1)
+//                        {
+//                            for (var jk=1;jk<strs.length;jk++)
+//                            {
+//                                imagestr=imagestr+'<img src="'+imageHeader+strs[jk]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+//
+//
+//
+//                            }
+//
+//                        }
+//
+//                        console.log(imagestr);
+//                    }
+//
+//
+//                    console.log("asdadas");
+//
+//                    $("#imageslist").append(imagestr
+//                    );
+                    for (var k=0;k<strs.length;k++)
+                    {
+                        var str1 = strs[k].replace('mobile', 'mobile2');
+                        imagestr=imagestr +'<div onclick="photoViewer(\''+strs[k]+'\')" style="width: 90px;height: 90px;padding-bottom: 27%;height: 0px;;float: left;margin-left: 5px;background-image: url('+str1+');background-size: cover; ">'+'</div>';
+
+                        // imagestr=imagestr +'<img src="'+strs[k]+'" style="width: 100%;height: 0;padding-bottom: 40%;float: left;margin-left: 10px"/>';
+
+
+
+                    }
+
+                    var nn=strs.length;
+                    if (nn>0&&nn<=3)
+                    {
+                        $("#imageslist").append('<li style="list-style: none;margin: 0 0 5px 10px;padding-left: 0px;" >'
+                                +'<div style="width: 90%;margin: 10px 5% 0px 5%">'
+                                +'<p style="font-size: 18px">'+ arr[i].reportDate +'</p>'
+                                +'</div>'
+                                +'<div style="width: 84%;height: 85px;margin-left: 8%">'
+                                +imagestr
+                                +'</div>'
+                                +'</li>'
+                        );
+                    }
+                    else if (nn>3&&nn<=6)
+                    {
+                        $("#imageslist").append('<li style="list-style: none;margin: 0 0 5px 10px;padding-left: 0px;" >'
+                                +'<div style="width: 90%;margin: 10px 5% 0px 5%">'
+                                +'<p style="font-size: 18px">'+ arr[i].reportDate +'</p>'
+                                +'</div>'
+                                +'<div style="width: 84%;height: 170px;margin-left: 8%">'
+                                +imagestr
+                                +'</div>'
+                                +'</li>'
+                        );
+                    }
+                    else if (nn>6)
+                    {
+                        $("#imageslist").append('<li style="list-style: none;margin: 0 0 5px 10px;padding-left: 0px;" >'
+                                +'<div style="width: 90%;margin: 10px 5% 0px 5%">'
+                                +'<p style="font-size: 18px">'+ arr[i].reportDate +'</p>'
+                                +'</div>'
+                                +'<div style="width: 84%;height: 255px;margin-left: 8%">'
+                                +imagestr
+                                +'</div>'
+                                +'</li>'
+                        );
+                    }
+
+
+
+
+
+
+
+                }
+
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取数据失败！");
+            }
+        });
+        var obj2 = document.getElementById("images");
+        obj2.style.cssText = "display:block";
+//        window.scrollTo(0,0);
+    }
+</script>

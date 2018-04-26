@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta http-equiv="Content-Type" content="textml; charset=utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>社区新闻</title>
+    <link href="css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link href="css/jquery.searchableselect.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/swipe.css">
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/iscroll.js"></script>
+
+    <style>
+        .ui-block-a {
+            background-color: black;
+            height: 170px;
+            /*font-weight: bold;*/
+            text-align: center;
+            /*padding: 30px;*/
+            width: 100%;
+        }
+
+        .ui-block-b, .ui-block-c, .ui-block-d {
+            height: 40%;
+            width: 33%;
+            /*font-weight: bold;*/
+            text-align: center;
+            padding: 5%;
+        }
+
+
+        .img1{
+            height:75%;
+            margin-top: 2%;
+            /*top: 22%;*/
+            /*margin-left: 10px;*/
+            /*margin-top:5%;*/
+
+
+
+        }
+
+
+        .contentstyle
+        {
+            width: 50%;
+            height: 30%;
+            float: right;
+            text-align: left;
+
+        }
+        image
+        {
+            width: 100%;
+
+        }
+        body {
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+
+        ul{
+            list-style: none;
+
+
+        }
+
+
+    </style>
+    <script src="css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <script src="js/CommunityNews.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+<div style="text-align: center; background-color: #3498db; border-color: #3498db; color:#fff;height:35px;padding:0;margin:0;font-size:1.4em;font-weight:400 ">
+    社区新闻
+</div>
+<div id="wrapper">
+    <div id="scroller">
+
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+
+        <ul id="thelist" >
+
+        </ul>
+
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</div>
+
+<div data-role="popup" id="myPopup1" class="ui-content">
+    <!--<p>我显示在窗口的中间部分。</p>-->
+</div>
+<!--<div id="iSlider-wr">-->
+    <!--&lt;!&ndash;<div data-role="main" class="ui-content">&ndash;&gt;-->
+    <!--<div data-role="main" >-->
+        <!--<div class="addWrap">-->
+            <!--<div class="swipe" id="mySwipe">-->
+                <!--<div class="swipe-wrap"  >-->
+                    <!--<div><a href="javascript:;"><img class="img-responsive" src="images/1.jpg" width="100%" /></a></div>-->
+                    <!--<div><a href="javascript:;"><img class="img-responsive" src="images/2.jpg"/></a></div>-->
+                    <!--<div><a href="javascript:;"><img class="img-responsive" src="images/3.jpg"/></a></div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<ul id="position">-->
+                <!--<li class="cur"></li>-->
+                <!--<li class=""></li>-->
+                <!--<li class=""></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<script src="js/swipe.js"></script>-->
+        <!--<script type="text/javascript">-->
+            <!--var bullets = document.getElementById('position').getElementsByTagName('li');-->
+            <!--var banner = Swipe(document.getElementById('mySwipe'), {-->
+                <!--auto: 2000,-->
+                <!--continuous: true,-->
+                <!--disableScroll:false,-->
+                <!--callback: function(pos) {-->
+                    <!--var i = bullets.length;-->
+                    <!--while (i&#45;&#45;) {-->
+                        <!--bullets[i].className = ' ';-->
+                    <!--}-->
+                    <!--bullets[pos].className = 'cur';-->
+                <!--}-->
+            <!--});-->
+        <!--</script>-->
+
+        <!--<div data-role="main" class="ui-content" style="top:7%;" \>-->
+
+
+
+            <!--<ul data-role="listview" data-inset="true" data-theme="c" class="list" >-->
+
+                <!--<li class="listyle" data-icon="false">-->
+                    <!--<a href="#">-->
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.22.54.png" class="img1"/>-->
+                        <!--<h2>倪家巷2017年第二个明珠决策日</h2>-->
+                        <!--<p>倪家巷2017年第二个民主决策日</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+                <!--<li data-icon="false">-->
+                    <!--<a href="#">-->
+
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.23.01.png" class="img1"/>-->
+                        <!--<h2>新区观点及陈家巷社区参观智慧社区</h2>-->
+                        <!--<p>2017年5月5日，新区观点及陈家巷社区</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+                <!--<li class="listyle" data-icon="false">-->
+                    <!--<a href="#">-->
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.22.54.png" class="img1"/>-->
+                        <!--<h2>倪家巷2017年第二个明珠决策日</h2>-->
+                        <!--<p>倪家巷2017年第二个民主决策日</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+                <!--<li data-icon="false">-->
+                    <!--<a href="#">-->
+
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.23.01.png" class="img1"/>-->
+                        <!--<h2>新区观点及陈家巷社区参观智慧社区</h2>-->
+                        <!--<p>2017年5月5日，新区观点及陈家巷社区</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+                <!--<li class="listyle" data-icon="false">-->
+                    <!--<a href="#">-->
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.22.54.png" class="img1"/>-->
+                        <!--<h2>倪家巷2017年第二个明珠决策日</h2>-->
+                        <!--<p>倪家巷2017年第二个民主决策日</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+                <!--<li data-icon="false">-->
+                    <!--<a href="#">-->
+
+                        <!--<img src="images/屏幕快照 2017-08-12 上午9.22.54.png" class="img1"/>-->
+                        <!--<h2>倪家巷2017年第二个明珠决策日</h2>-->
+                        <!--<p>倪家巷2017年第二个民主决策日</p>-->
+                    <!--</a>-->
+
+                <!--</li>-->
+            <!--</ul>-->
+
+        <!--</div>-->
+
+
+
+</body>
+</html>

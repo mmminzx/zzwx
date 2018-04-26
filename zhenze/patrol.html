@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title>民情日志</title>-->
+
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
+
+    <title>河道巡查</title>
+
+    <script src="../js/zhenze/patrol.js"></script>
+    <script src="../css/exif.js"></script>
+
+    <style>
+        html,body{
+            height:100%;
+            width:100%;
+        }
+
+        .headDiv{
+            width: 100%;
+            height: 220px;
+
+            margin-top: 0px;
+            /*text-align:center;*/
+            /*background-color: #00A2D4*/
+        }
+
+        .btnDiv
+        {
+
+            width: 150px;
+            height: 150px;
+            background-image: url(../images/green.png);
+            background-repeat:no-repeat;
+            /*margin-top: 100px;*/
+            background-size:100% 100%;
+            -moz-background-size:100% 100%;
+
+
+        }
+        .div2222{height:100%; width:100%; background: rgba(140, 140, 140, 0.4) ;position:absolute; top:0px; left:0; z-index:2;display:none}
+        /*.div3{height: 100%; width:100%; background: ; position:absolute; left:0; z-index:3;}*/
+    </style>
+    <script>
+        window.onpageshow = function(event){
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+        function histroy() {
+            console.log("history")
+            window.location.href="Myhistory.html";
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+<!--<img src="../images/daka.png" height="254" width="254"/>-->
+<div id="menu" style="width: 100%;text-align: center;font-size: 22px;margin-top: 60px"></div>
+<style type="text/css">
+    .div1{  width: 100px; height: 100px; border: 1px solid #000000;}
+    .div2{ width:40px ; height: 40px; background-color: green;}
+
+    .div11{
+        position: relative;
+    }
+    .div22{
+        position: absolute;margin:auto; top: 0;left: 0;right: 0;bottom: 0;
+    }
+</style>
+
+<div id="xuncha" class="headDiv div11"  >
+    <div class="btnDiv div22" id="btnview">
+        <label id="title" style="text-align: center;color: white;font-size: 24px;margin-top: 80px">开始巡河 </label>
+    </div>
+
+</div>
+<!--<div style="width: 100%;height: 70px;margin-bottom: 10px;">-->
+    <!--<label id="timelabel" style="text-align: center;font-size: 18px;"></label>-->
+    <!--<label id="riverlabel" style="text-align: center;font-size: 18px;"></label>-->
+<!--</div>-->
+<div id="tishi" style="width: 100%;height: 240px;text-align: center;font-size: 22px;margin-top: 40px">
+    <!--<label style="text-align: center;font-size: 22px;margin-top: 40px">未签到！请点击上方按钮开始巡河</label>-->
+    请点击上方按钮开始巡河</div>
+    <div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup"></div>
+<div id="mask" class="div2222"; >
+    <div style="margin-top: 200px;margin-left: 30%">
+        <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="circle" class="g-circles g-circles--v1">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+
+    </div>
+
+
+        <!--<use xlink:href="#circle" class="use"/>-->
+    </svg>
+</div>
+<div style="position:fixed;bottom:10px;left:10px;;width: 100px;height: 30px;color: cornflowerblue" onclick="histroy()">我的历史上传</div>
+</body>
+</html>

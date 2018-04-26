@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta http-equiv="Content-Type" content="textml; charset=utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>社区活动</title>
+    <link href="css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link href="css/jquery.searchableselect.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/swipe.css">
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <style>
+        .ui-block-a {
+            background-color: black;
+            height: 170px;
+            /*font-weight: bold;*/
+            text-align: center;
+            /*padding: 30px;*/
+            width: 100%;
+        }
+
+        .ui-block-b, .ui-block-c, .ui-block-d {
+            height: 40%;
+            width: 33%;
+            /*font-weight: bold;*/
+            text-align: center;
+            padding: 5%;
+        }
+
+
+        .img1{
+            height:75%;
+            margin-top: 2%;
+            /*top: 22%;*/
+            /*margin-left: 10px;*/
+            /*margin-top:5%;*/
+
+
+
+        }
+
+
+        .contentstyle
+        {
+            width: 50%;
+            height: 30%;
+            float: right;
+            text-align: left;
+
+        }
+        image
+        {
+            width: 100%;
+
+        }
+        body {
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+
+        ul{
+            list-style: none;
+
+
+        }
+
+
+    </style>
+    <script src="css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <script src="js/CommunityEvents.js"></script>
+    <script>
+        function addphoto(){
+//            window.history.go("photoTake.html");// 跳转到hello.html
+            window.location.href = "Addevent.html";
+//            document.getElementById("demo").innerHTML=Date();
+//            window.location.href = "CommunityIntroduce.html";
+        }
+    </script>
+
+</head>
+
+
+
+
+<body>
+<div data-role="header" data-theme="f">
+
+<h1 id="demo">社区活动</h1>
+<a  class="ui-btn ui-btn-right ui-shadow ui-icon-plus ui-btn-icon-left"  onclick="addphoto()">添加</a>
+</div>
+
+<div id="wrapper">
+    <div id="scroller">
+
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+
+        <ul id="thelist" >
+            <!--<li class="listyle" >-->
+            <!--<a href="#">-->
+            <!--<div class="listDivStyle">-->
+
+
+            <!--<h2 style="color: #333333">书记精准扶贫民情日记</h2>-->
+            <!--<p class="pstyle">6月30日上午，省扶贫办刘叶军处长一行深入到翁堵镇扁里村，对扶贫攻坚和建档立卡”回头看“工作进行监督检查和指导，市扶贫办副主任杨建军、县扶贫办主任杨永军和翁堵镇李向成书记、李仲华镇长一同前往检查。</p>-->
+
+            <!---->
+
+
+
+
+            <!--</div>-->
+            <!--</a>-->
+
+            <!--</li>-->
+
+        </ul>
+
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</div>
+
+<div data-role="popup" id="myPopup1" class="ui-content">
+    <p>我显示在窗口的中间部分。</p>
+</div>
+
+
+
+</body>
+</html>

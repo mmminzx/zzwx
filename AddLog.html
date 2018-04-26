@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>添加民情日志</title>
+    <!--<link href="../css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />-->
+    <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+
+    <link href="css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link href="css/jquery.searchableselect.css" rel="stylesheet" />
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <!--<script src="js/zyupload.basic-1.0.0.js"></script>-->
+    <script src="js/jquery.searchableselect.js"></script>
+    <!--<script src="js/phototake_add.js"></script>-->
+    <script>
+        $(document).bind("mobileinit", function () {
+            $.mobile.defaultPageTransition = 'none'
+            $.mobile.loadingMessage = '加载中...'
+            $.mobile.page.prototype.options.backBtnText = '后退'
+            $.mobile.page.prototype.options.addBackBtn = true
+        });
+    </script>
+    <script src="js/UpLoadMoodLog.js"></script>
+    <script src="js/MoodLog.js"></script>
+    <script>
+        function changetype(){
+            $("#content").html("");
+            var objS = document.getElementById("type");
+            var va = objS.options[objS.selectedIndex].value;
+            if (va==1)
+            {
+                $("#content").append( '<label for="fanwei">'+"巡查范围："+'</label>'+
+            '<textarea  placeholder="输入巡查范围。。。" id="fanwei">'+'</textarea>'+'<label for="question">'+"巡查发现问题："+'</label>'+'<textarea  placeholder="发现问题。。。" id="question">'+'<label for="Transaction">'+"处理情况："+'</label>'+
+                        '<textarea  placeholder="处理情况" id="Transaction">'+'</textarea>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>'
+            ).trigger('create');
+            }
+            else if (va==2)
+            {
+                $("#content").append('<label for="name">'+"户主姓名："+'</label>'
+                        +'<input style="height:30px;" placeholder="户主姓名" id="name">'+'<label for="phone">'+"联系电话："+'</label>'
+                        +'<input style="height:30px;" placeholder="联系电话" id="phone">'+'<label for="phone">'+"住址："+'</label>'
+                        +'<input style="height:30px;" placeholder="住址" id="adress">'+'<label for="visitName">'+"走访人："+'</label>'
+                        +'<input style="height:30px;" placeholder="走访人" id="visitName">'+'<label for="maincontent">'+"反应内容:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'
+                        +'<label for="result">'+"处理情况:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="result">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+            else if (va==3)
+            {
+                $("#content").append('<label for="name">'+"户主姓名："+'</label>'
+                        +'<input style="height:30px;" placeholder="户主姓名" id="name">'+'<label for="phone">'+"联系电话："+'</label>'
+                        +'<input style="height:30px;" placeholder="联系电话" id="phone">'+'<label for="phone">'+"住址："+'</label>'
+                        +'<input style="height:30px;" placeholder="住址" id="adress">'+'<label for="visitName">'+"走访人："+'</label>'
+                        +'<input style="height:30px;" placeholder="接访人" id="visitName">'+'<label for="maincontent">'+"接访内容:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'
+                        +'<label for="result">'+"处理情况:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="result">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+            else if (va==4)
+            {
+                $("#content").append('<label for="time">'+"会议时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="会议时间" id="time">'+'<label for="adress">'+"会议地点："+'</label>'
+                        +'<input style="height:30px;" placeholder="会议地点" id="adress">'+'<label for="name">'+"召集人："+'</label>'
+                        +'<input style="height:30px;" placeholder="召集人姓名" id="name">'+'<label for="AttendName">'+"出席人员："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="AttendName">'+'</textarea>'+'<label for="AbsentName">'+"缺席人员:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="AbsentName">'+'</textarea>'
+                        +'<label >'+"主要内容:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<label for="Request">'+"需要单位落实有关事项："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="Request">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+
+            }
+            else if (va==5)
+            {
+                $("#content").append('<label for="theme">'+"活动主题："+'</label>'
+                        +'<input style="height:30px;" placeholder="活动主题" id="theme">'+'<label for="name">'+"召集人："+'</label>'
+                        +'<input style="height:30px;" placeholder="召集人姓名" id="name">'+'<label for="time">'+"活动时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="活动时间" id="time">'+'<label for="adress">'+"活动地点："+'</label>'
+                        +'<input style="height:30px;" placeholder="活动地点" id="adress">'+'<label for="AttendName">'+"参加单位："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="AttendName">'+'</textarea>' +'<label >'+"活动记录:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<p>'+"*最多上传3张图片"+'</p>'
+                        +'<div id="zyupload" class="zyupload">'+'</div>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+                refresh();
+            }
+            else if (va==6)
+            {
+                $("#content").append('<label for="time">'+"会议时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="会议时间" id="time">'+'<label for="adress">'+"会议地点："+'</label>'
+                        +'<input style="height:30px;" placeholder="会议地点" id="adress">'+'<label for="name">'+"召集人："+'</label>'
+                        +'<input style="height:30px;" placeholder="召集人姓名" id="name">'+'<label for="AttendName">'+"出席人员："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="AttendName">'+'</textarea>'+'<label for="AbsentName">'+"缺席人员:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="AbsentName">'+'</textarea>'
+                        +'<label >'+"会议主要内容:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<label for="Request">'+"需要自己办理事项："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="Request">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+            else if (va==7)
+            {
+                $("#content").append('<label for="OrganizationName">'+"受检单位："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位名称" id="OrganizationName">'+'<label for="adress">'+"单位地址："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位地址" id="adress">'+'<label for="time">'+"检查时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="检查时间" id="time">'+'<label for="name">'+"单位联系人："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位联系人" id="name">'+'<label for="AttendName">'+"参与检查人员："+'</label>'
+                        +'<textarea  placeholder="输入参与检查人员姓名" id="AttendName">'+'</textarea>'
+                        +'<label >'+"发现问题:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<label for="Request">'+"整改情况："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="Request">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+
+    <label for="name">选择类型：</label>
+    <select name="type" id="type" data-theme="f" onchange="changetype()">
+        <option value="1">巡查工作日志</option>
+        <option value="2">民情走访记录（走访）</option>
+        <option value="3">民情走访记录（接访）</option>
+        <option value="4" >网格员会议记录</option>
+        <option value="5">平安建设活动记录</option>
+        <option value="6">平安建设会议记录</option>
+        <option value="7">平安建设检查情况</option>
+
+
+    </select>
+    </fieldset>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+        <label for="fanwei">巡查范围：</label>
+        <textarea style="height:280px;" placeholder="输入巡查范围。。。" id="fanwei"></textarea>
+    <label for="question">巡查发现问题：</label>
+    <textarea style="height:280px;" placeholder="发现问题。。。" id="question"></textarea>
+        <label for="Transaction">处理情况：</label>
+        <textarea style="height:280px;" placeholder="处理情况" id="Transaction"></textarea>
+    <button id="fileSubmit" data-theme="f">提交</button>
+
+
+        <!--<label for="name">主题：</label>-->
+        <!--<input style="height:30px;" placeholder="主题" id="theme">-->
+        <!--<label for="phone">联系方式：</label>-->
+        <!--<input style="height:30px;" placeholder="输入联系方式" id="phone">-->
+        <!--<label for="IDCard">活动时间：</label>-->
+        <!--<input style="height: 30px;" placeholder="活动时间" id="time">-->
+        <!--<label for="IDCard">地址：</label>-->
+        <!--<input style="height: 30px;" placeholder="活动地点" id="adress">-->
+        <!--<label for="fname">内容：</label>-->
+        <!--<textarea style="height:280px;" placeholder="说点什么吧。。。" id="photoContent"></textarea>-->
+        <!--<p>*最多上传3张图片</p>-->
+        <!--<div id="zyupload" class="zyupload"></div>-->
+        <!--<button id="fileSubmit" data-theme="f">提交</button>-->
+
+
+    </div>
+</div>
+
+
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>主页</title>
+    <!--<link href="../css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />-->
+
+    <!--<link href="css/jquery.mobile.flatui.css" rel="stylesheet" />-->
+
+    <!--<link href="css/zyupload-1.0.0.min.css" rel="stylesheet" />-->
+    <!--<link href="css/jquery.searchableselect.css" rel="stylesheet" />-->
+    <!--<script src="js/jquery-2.0.3.min.js"></script>-->
+    <!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+    <!--<script src="js/jquery.searchableselect.js"></script>-->
+    <script src="../js/zhenze/publicJS.js"></script>
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/Home.js"></script>
+
+    <style>
+        html,body{
+            height:100%;
+            width:100%;
+        }
+
+        .iBody
+        {
+            height:100%;
+            margin:0;
+            /*zzwxbg.png*/
+            /*background-image:url(../images/bg11.png);*/
+            /*background-repeat:no-repeat;*/
+            background-color: #e5fff9;
+            background-size:100% 100%;
+            -moz-background-size:100% 100%
+        }
+        .divtishi{
+
+            margin: auto;
+            /*margin-top: 8px;*/
+            width: 96px;
+            height: 110px;
+            /*background-color: orange;*/
+
+        }
+        .img {
+            margin-top: 8px;
+            width: 96px;
+        }
+
+        body {
+            font-weight: 500;
+            font-family: 'Microsoft YaHei';
+        }
+        .menu
+        {
+            width: 100%;
+            height: 350px;
+
+
+        }
+        .btn1
+        {
+            width: 50%;
+            height: 150px;
+            margin-top: 20px;
+            /*margin-left: 10%;*/
+            /*background-color: #00a2d4;*/
+            text-align: center;
+            float: left;
+        }
+        .title
+        {
+            width: 100%;
+            text-align: center;
+            margin-top: 120px;
+            height: 30px;
+            line-height: 30px;
+            /*font-size: 18px;*/
+            color:black;
+            font-size: 30px
+
+
+        }
+        .imageDiv
+        {
+            width: 100%;
+            height: 110px;
+
+        }
+
+        a:link {
+            text-decoration:none;
+            color:black;
+        }
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        .headDiv{
+            width: 100%;
+            height: 250px;
+
+            margin-top: 0px;
+            /*text-align:center;*/
+            /*background-color: #00A2D4*/
+        }
+    </style>
+
+    <script>
+        console.log($.cookie('zzwxToken'));
+        function click1(n) {
+//            console.log("selectRiver.html?"+"type="+n);
+        console.log(n);
+            if (n=="1")
+            {
+
+//                localStorage.removeItem('patrolStatus');
+                window.location.href="patrol.html";
+
+            }
+            else  if (n=="2")
+            {
+
+                window.location.href="sorting.html";
+
+            }
+            else  if (n=="3")
+            {
+
+                window.location.href="patrolRecords.html";
+
+            }
+            else  if (n=="4")
+            {
+
+                window.location.href="MyRecord.html";
+
+            }
+            else  if (n=="5")
+            {
+
+                window.location.href="SuperiorPush.html";
+
+            }
+            else  if (n=="6")
+            {
+
+                window.location.href="selectRiver.html?"+"type="+n;
+
+            }
+            else  if (n=="7")
+            {
+                window.location.href="entrust.html";
+
+            }
+            else  if (n=="8")
+            {
+
+                WeixinJSBridge.call('closeWindow');
+
+
+
+            }
+            else
+            {
+                window.location.href="selectRiver.html?"+"type="+n;
+
+            }
+        }
+
+    </script>
+
+
+
+</head>
+<body class="iBody">
+
+    <div  class="menu" >
+        <a  style="text-decoration: none" >
+             <div class="btn1" onclick="click1('1')">
+
+                 <div class="imageDiv">
+                      <img src="../images/巡河上报.png" class="img">
+                 </div>
+
+                 <label  class="title" style="font-size: 18px">河道巡查</label>
+             </div>
+        </a>
+
+        <a  style="text-decoration: none">
+            <div class="btn1" onclick="click1('4')">
+
+                <div class="imageDiv">
+                    <img src="../images/wdjl.png" class="img">
+                </div>
+
+                <label class="title" style="font-size: 18px">巡查历史</label>
+            </div>
+        </a>
+        <a  style="text-decoration: none">
+            <div class="btn1"  onclick="click1('5')">
+
+                <div class="imageDiv" style="text-align: center">
+                    <div class="divtishi"  >
+                        <img src="../images/sjts.png" style="width: 96px;height: 96px;margin-top: 8px">
+                        <div id="tishi" style="top: 198px;left: 33%;height: 30px; width:30px; background:red; position:absolute; z-index:3;border-radius:15px;line-height:30px;color: white;display:none">
+                        5
+                        </div>
+                    </div>
+
+                </div>
+
+                <label id="tixing" class="title" style="font-size: 18px">信息提醒</label>
+            </div>
+        </a>
+
+            <div class="btn1"  onclick="click1('6')">
+
+                <div class="imageDiv">
+                    <img src="../images/工作.png" class="img">
+                </div>
+
+                <label class="title" style="font-size: 18px">基本信息</label>
+            </div>
+
+
+
+        <div  style=" width: 50%;height: 150px; margin-top: 130px;margin-left: 40%;text-align: center;float: left;;text-decoration: none" onclick="click1('8')">
+
+            <div style="width: 150px;height: 150px;background-image: url(../images/red.png);background-repeat:no-repeat;
+            /*margin-top: 100px;*/
+            background-size:100% 100%;
+            -moz-background-size:100% 100%;position: absolute;margin:auto; top: 200px;left: 0;right: 0;bottom: 0;">
+                <!--<img src="../images/退出.png" style="margin-top: 8px;width: 96px;">-->
+                <label id="title" style="text-align: center;color: white;font-size: 20px;margin-top: 80px">退出登录 </label>
+            </div>
+
+            <!--<label class="title">退出登录</label>-->
+        </div>
+
+
+    <!--</div>-->
+    <!--<style type="text/css">-->
+        <!--.div1{  width: 100px; height: 100px; border: 1px solid #000000;}-->
+        <!--.div2{ width:40px ; height: 40px; background-color: green;}-->
+
+        <!--.div11{-->
+            <!--position: relative;-->
+        <!--}-->
+        <!--.div22{-->
+            <!--position: absolute;margin:auto; top: 0;left: 0;right: 0;bottom: 0;-->
+        <!--}-->
+    <!--</style>-->
+
+    <!--<div id="xuncha" class="headDiv div11" style="margin-top: 350px;background-color: orange" >-->
+        <!--<div class="btnDiv div22" id="btnview">-->
+            <!--<label id="title" style="text-align: center;color: white;font-size: 24px;margin-top: 120px">开始巡河 </label>-->
+        <!--</div>-->
+
+    </div>
+
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+
+</body>
+</html>

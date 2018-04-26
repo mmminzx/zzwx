@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>水质状况</title>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/ShuiZhi.js"></script>
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="jqplot.js"></script>
+
+    <style>
+        .menu
+        {
+            width: 50%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+
+            font-size: 20px;
+            line-height: 48px;
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0px;
+        }
+        .pcontentstyle{
+
+            font-size: 20px;
+            line-height: 40px;
+            width: 100%;
+            height: 40px;
+            vertical-align: middle;
+            text-align: left;
+            margin: 2px;
+            margin-left: 10px;
+            color: #474747;
+        }
+        .pCCstyle{
+
+            font-size: 20px;
+            line-height: 50px;
+            width: 50%;
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0px;
+            float: left;
+        }
+    </style>
+    <script>
+        function selected1() {
+
+            var obj = document.getElementById("p1");
+            obj.style.cssText = "border-bottom: 2px solid black;";
+
+            var obj2 = document.getElementById("p2");
+            obj2.style.cssText = "border-bottom: 0px solid black;";
+//            document.getElementById("water").src="../images/wantershishi.png";
+
+            $("#maincontent").html("");
+
+
+                    var num=infoArr.length;
+
+                    if (num>0)
+                    {
+                        $("#maincontent").append('<div style="height: 40px;width: 100%;background-color: #e0e0e0">'
+                            +'<p class="pcontentstyle" id="time">'+'时间：2017771171'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #e0e0e0">'
+                                +'<p class="pCCstyle">'+'属性'+'</p>'
+                                +'<p class="pCCstyle">'+'检查值'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #f2f2f2">'
+                                +'<p class="pCCstyle">'+'PH'+'</p>'
+                                +'<p class="pCCstyle" id="PH">'+'暂无'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #f8f8f8">'
+                                +'<p class="pCCstyle">'+'COD(mg/L)'+'</p>'
+                                +'<p class="pCCstyle" id="COD">'+'暂无'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #f2f2f2">'
+                                +'<p class="pCCstyle">'+'氨氮(mg/L)'+'</p>'
+                                +'<p class="pCCstyle" id="andan">'+'暂无'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #f8f8f8">'
+                                +'<p class="pCCstyle">'+'总磷(mg/L)'+'</p>'
+                                +'<p class="pCCstyle" id="zonglin">'+'暂无'+'</p>'
+                                +'</div>'
+                                +'<div style="height: 50px;width: 100%;background-color: #f2f2f2">'
+                                +'<p class="pCCstyle">'+'总氮(mg/L)'+'</p>'
+                                +'<p class="pCCstyle" id="zongdan">'+'暂无'+'</p>'
+                                +'</div>'
+                                +'<div style="position:fixed;top:102px;left:50%;width: 2px;height: 300px;background-color: #b4b4b4">'+'</div>'
+                        );
+
+
+                        var Data=infoArr[0];
+                        document.getElementById("time").innerHTML="时间:  "+Data["reportDate"].substring(0,10);
+                        document.getElementById("PH").innerHTML=Data["PH"];
+                        document.getElementById("COD").innerHTML=Data["COD"];
+                        document.getElementById("andan").innerHTML=Data["NH3"];
+                        document.getElementById("zonglin").innerHTML=Data["TP"];
+                        document.getElementById("zongdan").innerHTML=Data["TN"];
+
+
+
+                    }
+
+
+
+
+
+        }
+        function selected2() {
+
+            var obj = document.getElementById("p1");
+            obj.style.cssText = "border-bottom: 0px solid black;";
+
+            var obj2 = document.getElementById("p2");
+            obj2.style.cssText = "border-bottom: 2px solid black;";
+//            document.getElementById("water").src="../images/wanterzhexiantu.png";
+
+
+            $("#maincontent").html("");
+
+
+            var num=infoArr.length;
+
+            if (num>0) {
+                $("#maincontent").append('<div id="chart1">'+'</div>'+'<div id="chart2">'+'</div>'+'<div id="chart3">'+'</div>'+'<div id="chart4">'+'</div>'+'<div id="chart5">'+'</div>'
+                );
+
+
+                var data = [ArrPH,ArrCOD,ArrNH3,ArrTP,ArrTN];
+                var data_max = 14; //Y轴最大刻度
+                var line_title = ["PH"]; //曲线名称
+                var y_label = "数值"; //Y轴标题
+                var x_label = ""; //X轴标题
+                var x = [ArrDate]; //定义X轴刻度值
+                var title = "PH值变化"; //统计图标标题
+                j.jqplot.diagram.base("chart1", [ArrPH], line_title, "PH变化", x, x_label, y_label, 14, 1);
+                j.jqplot.diagram.base("chart2", [ArrCOD], ["COD"], "COD变化", x, x_label, y_label, 200, 1);
+                j.jqplot.diagram.base("chart3", [ArrNH3], ["NH3"], "氨氮变化", x, x_label, y_label, 30, 1);
+                j.jqplot.diagram.base("chart4", [ArrTP], ["总磷"], "总磷变化", x, x_label, y_label, 8, 1);
+                j.jqplot.diagram.base("chart5", [ArrTN], ["总氮"], "总氮变化", x, x_label, y_label, 35, 1);
+
+
+            }
+        }
+
+     </script>
+
+
+
+</head>
+<body>
+<div  style="width: 100%;height: 60px;" >
+    <div class="menu" id="p1" style=" border-bottom: 2px solid black;" onclick="selected1()">
+        <p class="pstyle" >实时</p>
+    </div>
+    <div class="menu" id="p2" onclick="selected2()">
+        <p class="pstyle" >所有</p>
+    </div>
+</div>
+
+<div id="maincontent" style="width: 100%;margin-top: 0px;padding-top: 0;">
+    <div style="height: 40px;width: 100%;background-color: #e0e0e0">
+        <p class="pcontentstyle" id="time">时间：--</p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #e0e0e0">
+        <p class="pCCstyle"> 属性</p>
+        <p class="pCCstyle"> 检查值</p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #f2f2f2">
+        <p class="pCCstyle">PH</p>
+        <p class="pCCstyle" id="PH">暂无</p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #f8f8f8">
+        <p class="pCCstyle">COD(mg/L)</p>
+        <p class="pCCstyle" id="COD">暂无</p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #f2f2f2">
+        <p class="pCCstyle">氨氮(mg/L)</p>
+        <p class="pCCstyle" id="andan">暂无 </p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #f8f8f8">
+        <p class="pCCstyle">总磷(mg/L)</p>
+        <p class="pCCstyle" id="zonglin">暂无 </p>
+    </div>
+    <div style="height: 50px;width: 100%;background-color: #f2f2f2">
+        <p class="pCCstyle">总氮(mg/L)</p>
+        <p class="pCCstyle" id="zongdan">暂无</p>
+    </div>
+    <div style="position:fixed;top:102px;left:50%;width: 2px;height: 300px;background-color: #b4b4b4"></div>
+
+
+
+
+</div>
+<!--<img id="water" src="../images/wantershishi.png" width="100%"/>-->
+</body>
+</html>
+
+

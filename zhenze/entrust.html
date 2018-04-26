@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/zhenze/publicJS.js"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <!--<title>委托巡河</title>-->
+    <style>
+        .menu
+        {
+            width: 50%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 20px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function liclick(n) {
+                console.log(toals[n]);
+            localStorage.selectedentrust = JSON.stringify(toals[n]);
+            window.location.href="weituoxuncha.html";
+        }
+        function addentrust() {
+            window.location.href="entrustRivers.html";
+        }
+    </script>
+    <script src="../js/zhenze/entrust.js"></script>
+</head>
+<body>
+<div data-role="header" data-theme="f">
+
+    <h1 id="demo">委托巡河</h1>
+    <a  class="ui-btn ui-btn-right ui-shadow ui-icon-plus ui-btn-icon-left"  onclick="addentrust()">添加</a>
+</div>
+<div  style="width: 100%;height: 50px">
+    <div class="menu"  onclick="selected1()">
+        <p class="pstyle" id="p1" style=" border-bottom: 2px solid black;">委托别人</p>
+    </div>
+    <div class="menu" id="p2" onclick="selected2()">
+        <p class="pstyle" >委托我的</p>
+    </div>
+
+</div>
+
+<div id="wrapper">
+    <div id="scroller">
+
+
+
+        <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px;margin-top: 20px">
+
+            <!--<li  style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托人员：陈琦</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">巡查河流：划船港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托状态：待巡查</p>-->
+
+
+            <!--</li>-->
+
+            <!--<li  style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托人员：戴建新</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">巡查河流：波斯湾</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托状态：待巡查</p>-->
+
+
+            <!--</li>-->
+            <!--<li  style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托人员：陈琦</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">巡查河流：李家港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托状态：待巡查</p>-->
+
+
+            <!--</li>-->
+
+            <!--<li  style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托人员：戴建新</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">巡查河流：姚家扇</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">委托状态：待巡查</p>-->
+
+
+            <!--</li>-->
+
+
+        </ul>
+
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</div>
+</body>
+<script>
+    function selected1() {
+        selectype=1;
+        toals.splice(0,toals.length);
+        var obj = document.getElementById("p1");
+        obj.style.cssText = "border-bottom: 2px solid black;";
+
+        var obj2 = document.getElementById("p2");
+        obj2.style.cssText = "border-bottom: 0px solid black;";
+        $("#thelist").html("");
+        var  token=$.cookie('zzwxToken');
+        $.ajax({
+            type: "get",
+            url: svc_own + "Ashx_Question.ashx",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
+                method: "getEntrustPageList",
+                fromUser:token,
+                page:1,
+                pageSize:10
+            },
+            success: function (result) {
+//                console.log(result);
+                if (result.isOK) {
+                    console.log(result.rows);
+                    // var imgurl="../images/未选择.png";
+                    $("#thelist").html("");
+                    var arr=result.rows;
+
+                    for(var i=0;i<arr.length;i++)
+                    {
+                        toals.push(arr[i]);
+                        var status="待巡查";
+                        if (arr[i].status==2)
+                        {
+                            status="已巡查";
+
+                        }
+
+                        $("#thelist").append( '<li onclick="liclick11(\''+i+'\')" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                                +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"委托人员："+arr[i].UserName+'</p>'
+                                +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"巡查河流："+arr[i].name+'</p>'
+                                +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"委托状态："+status+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+arr[i].entrustDate+'</p>'
+                                +'</li>');
+
+                    }
+
+
+
+                }
+                else
+                {
+                    console.log("nono")
+                    $("#myPopup1").html(" <a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right\">关闭</a><h2 style=\"text-align:center;\">获取数据失败！</h2><p>" + result.message + "</p>")
+                    $("#myPopup1").popup('open');
+
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取数据失败！");
+            }
+        });
+
+
+    }
+    function selected2() {
+        selectype=2;
+        toals.splice(0,toals.length);
+        var obj = document.getElementById("p1");
+        obj.style.cssText = "border-bottom: 0px solid black;";
+
+        var obj2 = document.getElementById("p2");
+        obj2.style.cssText = "border-bottom: 2px solid black;";
+//        http://localhost:7301/ProjectWeb/sharedService/Ashx_Question.ashx?method=getEntrustPageList&fromUser=74220137-48B9-4AB7-A119-DAB07929B990&page=1&pageSize=10
+        var  token=$.cookie('zzwxToken');
+        $("#thelist").html("");
+        $.ajax({
+            type: "get",
+            url: svc_own + "Ashx_Question.ashx",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
+                method: "getEntrustPageList",
+                toUser:token,
+                page:1,
+                pageSize:10
+            },
+            success: function (result) {
+//                console.log(result);
+                if (result.isOK) {
+                    console.log(result.rows);
+                    // var imgurl="../images/未选择.png";
+                    $("#thelist").html("");
+                    var arr=result.rows;
+
+                    for(var i=0;i<arr.length;i++)
+                    {
+                        toals.push(arr[i]);
+                        var status="待巡查";
+                        if (arr[i].status==2)
+                        {
+                            status="已巡查";
+
+                        }
+
+                        $("#thelist").append( '<li onclick="liclick11(\''+i+'\')" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >'
+                                +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"委托人员："+arr[i].UserName+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"巡查河流："+arr[i].name+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+"委托状态："+status+'</p>'
+                    +'<p style="color: #333333;font-size: 18px;margin-left: 0px">'+arr[i].entrustDate+'</p>'
+                    +'</li>');
+
+                    }
+
+
+
+                }
+                else
+                {
+                    console.log("nono")
+                    $("#myPopup1").html(" <a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right\">关闭</a><h2 style=\"text-align:center;\">获取数据失败！</h2><p>" + result.message + "</p>")
+                    $("#myPopup1").popup('open');
+
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取数据失败！");
+            }
+        });
+
+
+
+    }
+
+</script>
+</html>

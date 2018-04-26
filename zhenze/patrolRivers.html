@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title>民情日志</title>-->
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <script src="../js/iscroll.js"></script>
+    <style>
+        .ulstyle
+        {
+            /*background-color: #00a2d4;*/
+
+
+        }
+        .div11{
+            position: relative;
+        }
+        .div22{
+            position: absolute;margin:auto; top: 0;left: 0;right: 0;bottom: 0;
+        }
+    </style>
+
+
+    <script>
+        function addphoto(){
+
+            window.location.href = "mapSelect.html";
+
+        }
+    </script>
+
+    <script src="../js/zhenze/patrolRivers.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" >
+    <div data-role="header" data-theme="f">
+
+        <h1 id="demo">河流选择</h1>
+        <a  class="ui-btn ui-btn-right ui-shadow ui-icon-navigation ui-btn-icon-left"  onclick="addphoto()">地图</a>
+    </div>
+    <div style="margin: 0 5px 0 5px" id="dddv" >
+
+        <script>
+            setTimeout(function () {
+                var o=document.getElementById('dddv');//获得元素
+                o.style.height=document.body.clientHeight-100+'px';
+            },100)
+        </script>
+    <div id="wrapper" style="observer:true;observeParents:true;height: 100%">
+        <div id="scroller">
+
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+
+            <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+
+
+
+            </ul>
+
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="popup" id="myPopup1" class="ui-content">
+        <!--<p>我显示在窗口的中间部分。</p>-->
+    </div>
+        </div>
+    <button id="fileSubmit" data-theme="f">确定</button>
+</div>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+//            var mk = new BMap.Marker(r.point);
+//            map.addOverlay(mk);
+//            map.panTo(r.point);
+//            alert('您的位置：'+r.point.lng+','+r.point.lat);
+
+            lon=r.point.lng;
+            lat=r.point.lat;
+//            console.log(bd09togcj02(r.point.lng,r.point.lat));
+            var temp=bd09togcj02(r.point.lng,r.point.lat);
+            var newloc=gcj02towgs84(temp[0],temp[1]);
+
+//            30.9124371686,120.5094498200
+            lon=newloc[0];
+            lat=newloc[1];
+
+//            console.log(newloc);
+        }
+        else {
+            alert('failed'+this.getStatus());
+        }
+    },{enableHighAccuracy: true})
+    //关于状态码
+    //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+    //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+    //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+    //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+    //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+    //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+    //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+    //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+    //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+//    function bd09togcj02(bd_lon, bd_lat) {
+//        var x_pi = 3.14159265358979324 * 3000.0 / 180.0;
+//        var x = bd_lon - 0.0065;
+//        var y = bd_lat - 0.006;
+//        var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * x_pi);
+//        var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * x_pi);
+//        var gg_lng = z * Math.cos(theta);
+//        var gg_lat = z * Math.sin(theta);
+//        return [gg_lng, gg_lat];
+//    }
+//    function gcj02towgs84(lng, lat) {
+//
+//            var dlat = transformlat(lng - 105.0, lat - 35.0);
+//            var dlng = transformlng(lng - 105.0, lat - 35.0);
+//            var radlat = lat / 180.0 * PI;
+//            var magic = Math.sin(radlat);
+//            magic = 1 - ee * magic * magic;
+//            var sqrtmagic = Math.sqrt(magic);
+//            dlat = (dlat * 180.0) / ((a * (1 - ee)) / (magic * sqrtmagic) * PI);
+//            dlng = (dlng * 180.0) / (a / sqrtmagic * Math.cos(radlat) * PI);
+//            mglat = lat + dlat;
+//            mglng = lng + dlng;
+//            return [lng * 2 - mglng, lat * 2 - mglat]
+//
+//    }
+//    var transformlat = function transformlat(lng, lat) {
+//        var ret = -100.0 + 2.0 * lng + 3.0 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng));
+//        ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0;
+//        ret += (20.0 * Math.sin(lat * PI) + 40.0 * Math.sin(lat / 3.0 * PI)) * 2.0 / 3.0;
+//        ret += (160.0 * Math.sin(lat / 12.0 * PI) + 320 * Math.sin(lat * PI / 30.0)) * 2.0 / 3.0;
+//        return ret
+//    };
+//
+//    var transformlng = function transformlng(lng, lat) {
+//        var ret = 300.0 + lng + 2.0 * lat + 0.1 * lng * lng + 0.1 * lng * lat + 0.1 * Math.sqrt(Math.abs(lng));
+//        ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0;
+//        ret += (20.0 * Math.sin(lng * PI) + 40.0 * Math.sin(lng / 3.0 * PI)) * 2.0 / 3.0;
+//        ret += (150.0 * Math.sin(lng / 12.0 * PI) + 300.0 * Math.sin(lng / 30.0 * PI)) * 2.0 / 3.0;
+//        return ret
+//    };
+</script>

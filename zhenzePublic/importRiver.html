@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <title>河道治理记录</title>
+    <style>
+        .menu
+        {
+            width: 33%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 20px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function liclick1() {
+            console.log("click");
+            window.location.href="importRiverDetail.html";
+        }
+
+    </script>
+    <script src="../js/public/importRivers.js"></script>
+</head>
+<body>
+
+
+<div id="wrapper">
+    <div id="scroller">
+
+
+
+        <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px;margin-top: 20px">
+
+            <!--<li onclick="liclick1()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报类型：异常上报</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">河道名称：快鸭港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">主要问题：河道污染严重</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报时间：2017.6.15</p>-->
+
+            <!--</li>-->
+
+            <!--<li onclick="liclick1()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报类型：异常上报</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">河道名称：快鸭港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">主要问题：有人在河道倾倒垃圾</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报时间：2017.6.15</p>-->
+
+            <!--</li>-->
+
+            <!--<li onclick="liclick1()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报类型：异常上报</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">河道名称：快鸭港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">主要问题：河水浑浊</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报时间：2017.6.15</p>-->
+
+            <!--</li>-->
+
+            <!--<li onclick="liclick1()" style="list-style: none;margin: 0 0 20px 10px;border-bottom:1px solid #616161;padding-left: 0px;" >-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报类型：异常上报</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">河道名称：快鸭港</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">主要问题：河道旁有人违章排放污水</p>-->
+                <!--<p style="color: #333333;font-size: 18px;margin-left: 0px">上报时间：2017.6.15</p>-->
+
+            <!--</li>-->
+
+
+        </ul>
+
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</div>
+<div data-role="popup" data-theme="f" id="myPopup"></div>
+</body>
+
+</html>

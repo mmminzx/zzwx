@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>河流选择</title>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <script src="../js/iscroll.js"></script>
+    <style>
+        .ulstyle
+        {
+            /*background-color: #00a2d4;*/
+
+
+        }
+        .phone-input{
+            padding-right:20px;
+            background:url("../images/删  除.png") no-repeat scroll left center transparent;
+        }
+    </style>
+
+
+    <script>
+        function addphoto(){
+
+            window.location.href = "AddLog.html";
+
+        }
+    </script>
+    <script src="../js/public/publicSelectRiver.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" >
+
+    <div  style="margin: 0 5px 0 5px" id="dddv" >
+        <!--<form action="">-->
+            <!--<input type="text" name="search" id="search">-->
+        <!--</form>-->
+        <input placeholder="输入河湖名称关键字" style="padding-right:20px;background:url('../images/搜索.png') no-repeat scroll right center transparent" type="text">
+        <script>
+            setTimeout(function () {
+                var o=document.getElementById('dddv');//获得元素
+                o.style.height=document.body.clientHeight+'px';
+            },100)
+        </script>
+    <div id="wrapper"  style="observer:true;observeParents:true;height: 100%">
+        <div id="scroller">
+
+            <div id="pullDown">
+                <!--<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>-->
+            </div>
+
+            <ul id="thelist" data-role="listview" style="margin-left: 0px;padding-left: 0px">
+                <!--<li onclick="liclick()"><a href="#">德国</a></li>-->
+            </ul>
+
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="popup" id="myPopup1" class="ui-content">
+        <!--<p>我显示在窗口的中间部分。</p>-->
+    </div>
+        </div>
+</div>
+
+</body>
+</html>

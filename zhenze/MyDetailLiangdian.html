@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>亮点推送修改</title>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <script src="../js/iscroll.js"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+
+
+
+
+    <style>
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        .starts{
+            padding-left: 0px;
+            padding-top:20px;
+            width: 100%;
+            background-color: white;
+        }
+        .starts ul{
+            float:left;
+            background-color: white;
+        }
+        .starts ul li{
+            list-style: none;
+            /*width:32px;*/
+            /*height:21px;*/
+            width:20%;
+            height:50px;
+            float:left;
+            background:url(../images/stark2.png) no-repeat;
+
+        }
+        .starts ul li.on{
+            background:url(../images/stars2.png) no-repeat;
+        }
+        .starts ul span{
+            display:inline;
+            float:left;
+            padding-left:10px;
+            height:21px;
+            line-height:21px;
+        }
+        .red{
+            color:red;
+        }
+        .menu
+        {
+            width: 25%;
+            height: 100%;
+            border-bottom: black;
+            /*background-color: rgba(0, 0, 0, 0.65);*/
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            overflow:hidden;
+            float: left;
+
+
+        }
+        .labelstyle
+        {
+            vertical-align:middle;
+            display:inline-block;
+
+            font-size: 18px;
+            background-color: #00a2d4;;
+        }
+        .pstyle{
+            font-family: "宋体";
+            font-size: 18px;
+            line-height: 48px;
+
+            width: 100%;
+            height: 48px;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+        .div2{height:100%; width:100%; background: #fefefe; position:absolute; top:0px; left:0; z-index:2;display:none}
+        .div3{height: 100%; width:100%; background:#fefefe; position:absolute; left:0; z-index:3;display:none}
+    </style>
+    <script>
+        function changeRiver() {
+            var objS = document.getElementById("selsectedRiver");
+            var type = objS.options[objS.selectedIndex].value;
+            riverId=totalRiver[type].OID;
+//
+            riverName=totalRiver[type].name;
+            console.log(riverId+riverName);
+
+        }
+        function changexiaqu() {
+
+
+            var objS = document.getElementById("xiaqu");
+            var type = objS.options[objS.selectedIndex].value;
+//            console.log(type);
+//            console.log(xaiquArr[type]);
+            villageCode=xaiquArr[type]['token'];
+            villageName=xaiquArr[type]['UserName'];
+            console.log(villageName+villageCode);
+//            var seltype=jianyiArr[type][]
+//            processTime= $("#jianyi").find("option:selected").text();
+//            console.log(processType);
+
+        }
+        function changetype(){
+//            $("#content").html("");
+            var objS = document.getElementById("normaltype");
+            var type = objS.options[objS.selectedIndex].value;
+            selectedtypeName=$("#normaltype").find("option:selected").text();
+            selectedtype =typeArr[type]["Id"];
+            console.log(selectedtypeName+selectedtype);
+
+        }
+    </script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/MyDetailLiangdian.js"></script>
+
+
+</head>
+<body>
+
+<div class="div3" id="images">
+    <div style="width: 100%;height: 50px;text-align: center;font-size: 18px;line-height: 50px">
+        我的历史上传
+        <div onclick="hideImages()" id="close" style="width: 50px;height: 50px;float: right">
+            <img style="width: 50px;height: 50px" src="../images/close.png">
+        </div>
+    </div>
+    <div style="margin: 0 5px 0 5px" id="dddv" >
+
+        <script>
+            setTimeout(function () {
+                var o=document.getElementById('dddv');//获得元素
+                o.style.height=document.body.clientHeight-50+'px';
+            },100)
+        </script>
+        <div id="wrapper" style="observer:true;observeParents:true;height: 100%">
+            <div id="scroller">
+
+                <div id="pullDown">
+                    <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+                </div>
+
+                <ul id="imageslist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+
+
+
+                </ul>
+
+                <div id="pullUp">
+                    <span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="div2" id="rivers">
+    <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+    </ul>
+</div>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em;height: 100%" id="page1">
+
+    <p>*上传图片</p>
+
+    <div class="z_photo">
+        <div class="z_file">
+            <input  type="file" accept="image/*" name="file" id="file" value=""  style="position: absolute;float:left; padding:0px; margin:0px;opacity: 0" onchange="imgChange('z_photo','z_file');" />
+
+        </div>
+
+    </div>
+    <!--<img src="" id="sii" style="width: 50px;height: 50px">-->
+    <!--<label for="type">选择河湖（<span class="red">*必选</span>）：</label>-->
+    <!--<button id="selectRiver" data-theme="f">选择河湖</button>-->
+    <label for="selsectedRiver">选择河湖（<span class="red">*必选</span>）：</label>
+    <select name="type" id="selsectedRiver" data-theme="f" onchange="changeRiver()">
+        <option value="99" disabled selected value>请点击选择河湖</option>
+    </select>
+    </fieldset>
+    <label for="normaltype">选择类型（<span class="red">*必选</span>）：</label>
+    <select name="type" id="normaltype" data-theme="f" onchange="changetype()">
+        <option value="99" disabled selected value>请点击选择上报类型</option>
+
+    </select>
+    </fieldset>
+
+
+    <br>
+    <br>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+
+
+
+        <label for="question">此时的想法(可不填)：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="question"></textarea>
+        <label for="xiaqu">所属辖区（<span class="red">*必选</span>）：</label>
+        <select name="type" id="xiaqu" data-theme="f" onchange="changexiaqu()">
+            <option value="99" disabled selected value>请点击选择所属辖区</option>
+
+        </select>
+        </fieldset>
+        <label >*提交时会上传当前定位。</label>
+        <button id="fileSubmit" data-theme="f">提交</button>
+
+        <div style="margin-top: 40px;width: 100px;height: 30px;color: cornflowerblue" onclick="histroy()">我的历史上传</div>
+
+
+
+
+
+    </div>
+</div>
+<script>
+    setTimeout(function () {
+        var o=document.getElementById('page1');//获得元素
+        o.style.height=document.body.clientHeight+'px';
+    },100)
+</script>
+
+<div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup" class="ui-content" data-overlay-theme="b"></div>
+</body>
+
+</html>
+<script>
+    function histroy() {
+        var  token=$.cookie('zzwxToken');
+        $.ajax({
+            type: "get",
+            url: svc_own + "Ashx_Question.ashx",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
+                method: "getReportQuestionPageList",
+                token:token,
+                qType:1,
+                page:1,
+                pageSize:6,
+
+            },
+            success: function (result) {
+                console.log(result);
+                var arr=result.rows;
+
+                // console.log("asdadas"+arr.length);
+                for (var i=0;i<arr.length;i++)
+                {
+                    var Data=arr[i];
+                    strs=Data.imgs.split(",");
+                    var imagestr="";
+                    if (strs.length>0)
+                    {
+                        imagestr='<img src="'+strs[0]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+                        if(strs.length>1)
+                        {
+                            for (var jk=1;jk<strs.length;jk++)
+                            {
+                                imagestr=imagestr+'<img src="'+imageHeader+strs[jk]+'" style="width: 100%"  style="margin: 0px 0px 0px 10px "/>';
+
+
+
+                            }
+
+                        }
+
+                        console.log(imagestr);
+                    }
+
+
+                    console.log("asdadas");
+
+                    $("#imageslist").append(imagestr
+                    );
+
+
+                }
+
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("获取数据失败！");
+            }
+        });
+        var obj2 = document.getElementById("images");
+        obj2.style.cssText = "display:block";
+        window.scrollTo(0,0);
+    }
+</script>

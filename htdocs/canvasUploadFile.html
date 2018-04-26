@@ -1,0 +1,243 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="jquery-3.1.1.min.js"></script>
+	<title>个人资料</title>
+	<style>
+	html{height: 100%}
+	body{margin:0;padding:0;height: 100%}
+	#form1{
+		display:block;
+		width: 100%;
+		height: 150px;
+		background:#e5e5e5;
+		box-sizing:border-box;
+		position: relative;
+		-webkit-box-sizing:border-box;
+		padding:10px 0 0 0;
+	}
+	#form1 #file_s{
+		display:block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;top:0;
+		opacity:0;
+		z-index: 100;
+	}
+	#form1 .headImg{
+		width:100px;
+		height: 100px;
+		border-radius:50%;
+		position: absolute;
+		overflow: hidden;
+		top:0;bottom:0;
+		left:10%;
+		margin:auto 0;
+	}
+	#form1 .top .text_head{
+		color:#9e9e9e;
+		text-align: center;
+		width: 100px;
+		height: 30px;
+		position: absolute;
+		line-height: 30px;
+		right: 0;top:0;
+		bottom:0;
+		margin: auto 0;
+		font-size: 18px;
+	}
+	.sub{
+		width: 50%;
+		height: 30px;
+		line-height: 30px;
+		color:#fff;
+		margin:30px auto 0 auto;
+		background:#04abdd;
+		border-radius:5px;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	</style>
+</head>
+<body>
+	<form action="" method="post" enctype="multipart/form-data"  id="form1">
+		<div class="top">
+			<input type="file" id="file_s" name="headImg">
+			<div class="headImg">
+				<img src="headImg.jpg" id="showImg" width="100%" alt="">
+			</div>
+			<div class="text_head">更换头像</div>
+		</div>
+	</form>
+	<div class="sub">
+		提交
+	</div>
+</body>
+<script>
+	var file_s = document.getElementById('file_s');
+	var showImg = document.getElementById('showImg');
+
+	/*
+	*单图压缩上传
+	*@param ImgWidth  可选参数 --> 自定义压缩图片的宽 默认100
+	*@param ImgHeight 可选参数  --> 自定义压缩图片的高 默认100
+	*@param files     必选参数 -->  上传图片的控件  input["type"]=file
+	*@param show      必选参数 -->  显示图片的<img>标签对象
+	*@param  callback 可选参数 -->  压缩图片后的回调函数，在此函数处理业务逻辑
+	*/
+
+	var canvasUploadFile = function(obj){
+
+		var obj = obj || {};
+
+		var ImgW = obj.ImgWidth || 100 ; //默认100
+
+		var ImgH = obj.ImgHeight || 100 ;
+
+		var Files = obj.files;
+
+		var shows = obj.show;
+
+		var dealCallback = obj.callback;
+			
+		var	fileDate,upladFileDate;
+		//fileDate 为要上传的图片对象 upladFileDate 为上传的base64的图片数据流
+
+		console.log(typeof Files)
+
+		Files.addEventListener('change',function(){
+
+			var F = Files.files;
+
+	        if (F[0].type.indexOf("image") == 0) {
+
+	            if (F[0].size >= 5120000) {
+
+	                alert('您这张"'+ F[0].name +'"图片大小过大，应小于5M');
+
+	                return false;
+
+	            }else{
+
+	            	fileDate = F[0];
+
+	            	console.log(typeof fileDate);
+	            }
+
+	        } else {
+
+	            alert('睁大你的狗眼文件"' + F[0].name + '"不是图片。');	
+
+	            return false;
+
+	        }
+	        // console.log(F[0])
+	        // 处理图片
+	        fileDeal(ImgDeal);
+		});
+
+		//实时显示页面头像，并处理
+		var fileDeal = function(callbacks){
+
+			var file = fileDate;
+
+			console.log(file)
+
+			var reader = new FileReader();//H5读取文件数据接口
+
+			reader.readAsDataURL(file); //将文件读取为DataURL
+
+			//文件加载完毕后
+			reader.onload = function(e){
+
+				var url = e.target.result;
+
+				if(typeof callbacks == "function")
+				{
+					shows.setAttribute("src",url);
+					//此处设置显示图片的img标签的src
+
+					callbacks();//回调压缩
+				}
+			}
+		};
+
+		// 图片压缩处理
+		var ImgDeal = function(){
+
+			var canvas = document.createElement('canvas');
+
+			canvas.width = ImgW;
+
+			canvas.height = ImgH;
+
+			var ctx = canvas.getContext('2d');
+
+			shows.onload = function(){
+
+				// 调用canvas压缩
+				ctx.drawImage(shows,0,0,canvas.width,canvas.height)
+
+				// 用canvas输出base64数据流
+				upladFileDate = canvas.toDataURL("image/jpeg");
+
+				if(typeof dealCallback == "function")
+				{
+					//此处为 压缩图片后要做的事
+					dealCallback(upladFileDate)
+				}
+				
+			}
+		};
+	}
+
+/*调用方式*/
+	canvasUploadFile({
+
+		"ImgWidth":100, 
+
+		"ImgHeight":100,
+
+		"files": file_s,
+
+		"show" : showImg,
+
+		"callback" : function(e){
+
+			console.log(e)
+
+			//此处处理业务逻辑，例如在这里写点击按钮上传data,data就是要上传的那张图片的base64数据流  下面我以点击按钮上传为例
+
+			$('.sub').on('touchstart',function(){
+
+				$.ajax({
+
+					type : "POST",
+
+					url : "test.php",
+
+					data : e,//上传数据流
+
+					success : function(ev){
+
+						console.log(ev)
+						// 上传成功
+
+					},
+					error : function(err){
+
+						console.log("error:"+err)
+					}
+				})
+			})
+		}
+	})
+</script>
+</html>

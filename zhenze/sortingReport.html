@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>异常上报</title>
+    <script src="../js/zhenze/publicJS.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E5ArgpDOhyIkIRnADfaMhBQlhysFMcvK"></script>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/AddImage.css">
+    <script src="../js/zhenze/sortingReport.js"></script>
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .starts{
+            padding-left: 0px;
+            padding-top:20px;
+            width: 100%;
+            background-color: white;
+        }
+        .starts ul{
+            float:left;
+            background-color: white;
+        }
+        .starts ul li{
+            list-style: none;
+            /*width:32px;*/
+            /*height:21px;*/
+            width:20%;
+            height: 40px;;
+            float:left;
+            margin-left: 10%;
+            text-align:center;
+            background:url(../images/stark2.png) no-repeat;
+
+        }
+        .starts ul li.on{
+            background:url(../images/stars2.png) no-repeat;
+        }
+        .starts ul span{
+            display:inline;
+            float:left;
+            padding-left:40px;
+            height:21px;
+            line-height:21px;
+        }
+        .div2{height:100%; width:100%; background: #fefefe; position:absolute; top:0px; left:0; z-index:2;display:none}
+    </style>
+    <script>
+        function changetypej() {
+            var objS = document.getElementById("jianyi");
+            var type = objS.options[objS.selectedIndex].value;
+//            var seltype=jianyiArr[type][]
+            processType= $("#jianyi").find("option:selected").text();
+            console.log(processType);
+
+        }
+        function changetype(){
+//            $("#content").html("");
+            var objS = document.getElementById("type");
+            var type = objS.options[objS.selectedIndex].value;
+            selectedtypeName=$("#type").find("option:selected").text();
+            if (type==1)
+            {
+                selectedtype = 11303;
+                getJianyi(117);
+
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+
+            }
+            else if (type==2)
+            {
+                selectedtype = 11301;
+                getJianyi(115);
+//                $("#content").append('<br>'
+//                        +'<p>'+"*工业问题需上传以下照片"+'</p>'+'<div style="display: flex;width: 100%;height: 40px;background-color: white;margin-top: 20px">'
+//                        +'<label style="margin:auto;margin-left: 0px">'+"企业照片、车间照片、企业内排污口照片、污水入河照片。"+'</label>'
+//                    +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"车间照片："+'</label>'
+////            +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"企业内排污口照片："+'</label>'
+////            +'</div>'
+////                    +'<div style="display: flex;width: 100%;height: 40px;background-color: white;>'
+////                    +'<label style="margin:auto;margin-left: 0px">'+"污水入河照片："+'</label>'
+////            +'</div>'
+//                        +'<div id="zyupload" class="zyupload">'+'</div>'
+//                        +'<label for="question">'+"内容："+'</label>'
+//            +'<textarea style="height:280px;" placeholder="输入内容。。。" id="question">'+'</textarea>'
+//                    +'<label >'+"*提交时会上传当前定位。"+'</label>'
+//            +'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1()
+
+            }
+            else if (type==3)
+            {
+                selectedtype = 11302;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(115);
+            }
+            else if (type==4)
+            {
+                selectedtype = 11304;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(116);
+            }
+            else if (type==5)
+            {
+                selectedtype = 11305;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(119);
+            }
+            else if (type==6)
+            {
+                selectedtype = 11306;
+//                $("#content").append( '<p>'+"*上传图片"+'</p>'+'<div id="zyupload" class="zyupload">'+'</div>'+'<label for="question">'+"内容："+'</label>'+'<textarea style="height:280px;" placeholder="发现问题。。。" id="question">'+'</textarea>'+'<label >'+"*提交时会上传当前定位。"+'</label>'+'<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+//                refresh1();
+                getJianyi(120);
+            }
+            else if (type==7)
+            {
+                $("#content").append('<label for="OrganizationName">'+"受检单位："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位名称" id="OrganizationName">'+'<label for="adress">'+"单位地址："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位地址" id="adress">'+'<label for="time">'+"检查时间："+'</label>'
+                        +'<input style="height:30px;" placeholder="检查时间" id="time">'+'<label for="name">'+"单位联系人："+'</label>'
+                        +'<input style="height:30px;" placeholder="单位联系人" id="name">'+'<label for="AttendName">'+"参与检查人员："+'</label>'
+                        +'<textarea  placeholder="输入参与检查人员姓名" id="AttendName">'+'</textarea>'
+                        +'<label >'+"发现问题:"+'</label>'+ '<textarea  placeholder="输入内容。。。" id="maincontent">'+'</textarea>'+'<label for="Request">'+"整改情况："+'</label>'
+                        +'<textarea  placeholder="输入内容" id="Request">'+'</textarea>'+
+                        '<button id="fileSubmit" data-theme="f">'+"提交"+'</button>').trigger('create');
+
+            }
+
+        }
+    </script>
+
+
+</head>
+<body>
+<div class="div2" id="rivers">
+    <ul id="thelist" class="ulstyle" style="margin-left: 0px;padding-left: 0px">
+    </ul>
+</div>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+    <p>*上传图片</p>
+    <div class="z_photo">
+        <div class="z_file">
+            <input  type="file" name="file" id="file" value=""  style="position: absolute;float:left; padding:0px; margin:0px;opacity: 0" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+
+        </div>
+
+    </div>
+    <label for="type">选择河湖（*必选）：</label>
+    <button id="selectRiver" data-theme="f">选择河流</button>
+    <label for="type">选择问题类型：</label>
+    <select name="type" id="type" data-theme="f" onchange="changetype()">
+        <option value="99" disabled selected value>请选择类型</option>
+        <option value="1">生活污水</option>
+        <option value="2">工业问题</option>
+        <option value="3">农业问题</option>
+        <option value="4" >涉河违章</option>
+        <option value="5">河道环境</option>
+        <option value="6">水质感官异常</option>
+    </select>
+    </fieldset>
+    <!--紧急情况-->
+    <label for="type">选择紧急情况：</label>
+    <div class="starts">
+        <ul id = "pingStar" style="width: 100%;height: 40px">
+            <li rel = "1" title = "特别差，给1分"></li>
+            <li rel = "2" title = "很差，给2分"></li>
+            <li rel = "3" title = "一般，给3分"></li>
+            <span id="dir"></span>
+        </ul>
+        <input type="hidden" value="" id = "startP" />
+    </div>
+    <script>
+        window.onload = function(){
+            var s = document.getElementById("pingStar");
+            m = document.getElementById("dir"),
+                    n = s.getElementsByTagName("li"),
+                    input = document.getElementById("startP");//保存所选值
+            clearAll = function(){
+                for(var i = 0;i < n.length;i++){
+                    n[i].className = "";
+                }
+            }
+            for(var i = 0;i < n.length;i++){
+                n[i].onclick = function(){
+                    var q = this.getAttribute("rel");
+                    var  alertstr="";
+                    if (q=="1")
+                    {
+                        emergency=1;
+                        alertstr="1星的问题将被反馈到大联动中心";
+
+                    }
+                    else if(q=="2" )
+                    {
+                        emergency=2;
+                        alertstr="2星的问题将被反馈到河长、社区负责人、大联动中心";
+
+
+                    }
+                    else if(q=="3" )
+                    {
+                        emergency=3;
+                        alertstr="3星的问题将被反馈到镇分管领导、社区负责人、河长、大联动中心";
+
+
+                    }
+                    $("#myPopup1").html(" <h2 style=\"text-align:center;\">提示</h2><p>" + alertstr + "</p>")
+                    $("#myPopup1").popup('open');
+                    clearAll();
+                    input.value = q;
+                    for(var i = 0;i < q;i++){
+                        n[i].className = "on";
+                    }
+//                    m.innerHTML = this.getAttribute("title");
+                }
+                n[i].onmouseover = function(){
+                    var q = this.getAttribute("rel");
+                    clearAll();
+                    for(var i = 0;i < q;i++){
+                        n[i].className = "on";
+                    }
+//                    m.innerHTML = this.getAttribute("title");
+                }
+                n[i].onmouseout = function(){
+                    clearAll();
+                    for(var i = 0;i < input.value;i++){
+                        n[i].className = "on";
+                    }
+
+                }
+            }
+        }
+
+    </script>
+
+    <br>
+    <br>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+
+
+
+        <label for="question">补充说明（可不填）：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="question"></textarea>
+        <label for="type">我的处理建议（*必填）：</label>
+        <select name="type" id="jianyi" data-theme="f" onchange="changetypej()">
+            <option value="99" disabled selected value>请选择处理建议</option>
+            <!--<option value="1">生活污水</option>-->
+            <!--<option value="2">工业问题</option>-->
+            <!--<option value="3">农业问题</option>-->
+            <!--<option value="4" >涉河违章</option>-->
+            <!--<option value="5">河道环境</option>-->
+            <!--<option value="6">水质感官异常</option>-->
+        </select>
+        </fieldset>
+
+        <label >*提交时会上传当前定位。</label>
+        <button id="fileSubmit" data-theme="f">提交</button>
+
+
+
+
+
+    </div>
+</div>
+
+<div id="allmap"></div>
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+//            var mk = new BMap.Marker(r.point);
+//            map.addOverlay(mk);
+//            map.panTo(r.point);
+            var temp=bd09togcj02(r.point.lng,r.point.lat);
+            var newloc=gcj02towgs84(temp[0],temp[1]);
+
+//            30.9124371686,120.5094498200
+            lon=newloc[0];
+            lat=newloc[1];
+        }
+        else {
+            alert('failed'+this.getStatus());
+        }
+    },{enableHighAccuracy: true})
+    //    //关于状态码
+    //    //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+    //    //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+    //    //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+    //    //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+    //    //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+    //    //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+    //    //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+    //    //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+    //    //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+    //    function bd09togcj02(bd_lon, bd_lat) {
+    //        var x_pi = 3.14159265358979324 * 3000.0 / 180.0;
+    //        var x = bd_lon - 0.0065;
+    //        var y = bd_lat - 0.006;
+    //        var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * x_pi);
+    //        var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * x_pi);
+    //        var gg_lng = z * Math.cos(theta);
+    //        var gg_lat = z * Math.sin(theta);
+    //        return [gg_lng, gg_lat]
+    //    }
+</script>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title></title>-->
+    <link href="css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link href="css/jquery.searchableselect.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/swipe.css">
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="css/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <style>
+        .img1{
+            height: 4em;;
+            width: 6em;
+            margin-top: 0;
+
+            /*top: 22%;*/
+            /*margin-left: 10px;*/
+            /*margin-top:5%;*/
+
+
+
+        }
+        list
+        {
+
+
+        }
+        .listDivStyle
+        {
+            height: 200px;
+            width: 100%;
+
+
+
+            border-bottom:1px solid #E5E5E5;
+        }
+        .pstyle{
+
+            position:relative;
+            line-height:1.4em;
+            color: #666666;
+            /* 3 times the line-height to show 3 lines */
+            height:30px;
+            overflow:hidden;
+            font-size: 12px;
+            /*height: ;*/
+            /*margin-top: 1px;*/
+            /*padding-top: 1px;*/
+
+        }
+        p::after {
+            content:"...";
+            font-weight:bold;
+            position:absolute;
+            bottom:0;
+            right:0;
+            padding:0 20px 1px 45px;
+            background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+        }
+        .imgDiv{
+            padding-top: 0;
+
+        }
+
+        ul
+        {
+            width: 100%;
+
+            padding-left: 0.001px;
+        }
+        li{
+
+            list-style: none;
+        }
+
+        .headerDiv
+        {
+            width: 100%;
+            height: 3em;
+            padding-top: 1em;
+            /*background-color: #00a2d4;*/
+
+        }
+        .headerImage{
+            height: 2.5em;
+            width: 2.5em;
+            margin-top: 0.25em;
+            border-radius: 1.25em;
+            float: left;
+        }
+        .nameLabel{
+            height: 1em;
+            width: 9em;
+            /*background-color: rgba(255, 104, 66, 0.36);*/
+            float: left;
+            text-align: left;
+            font-size: 1em;
+            padding-top: 1em;
+            padding-left: 10px;
+        }
+        .status
+        {
+
+            height: 1em;
+            width: 4em;
+            /*color: #1c9859;!*完成*!*/
+            color: #F1686F;/*未完成*/
+            float: right;
+            text-align: right;
+            font-size: 1em;
+            padding-top: 1em;
+            padding-left: 10px;
+        }
+    </style>
+    <script>
+        function addphoto(){
+
+            window.location.href = "AddZongzhi.html";
+
+        }
+    </script>
+</head>
+<body>
+<!--<div style="text-align: center; background-color: #3498db; border-color: #3498db; color:#fff;height:35px;padding:0;margin:0;font-size:1.4em;font-weight:400 ">-->
+<!--民情日志-->
+<!---->
+<!--</div>-->
+<div data-role="page" >
+
+    <div data-role="header" data-theme="f">
+
+        <h1 id="demo">综治</h1>
+        <a  class="ui-btn ui-btn-right ui-shadow ui-icon-plus ui-btn-icon-left"  onclick="addphoto()">添加</a>
+    </div>
+
+
+
+    <div data-role="main" class="ui-content" style="top:7%;" \>
+
+
+
+        <ul class="list" >
+
+            <li class="listyle" >
+                <a href="EventDetail.html">
+                    <div class="listDivStyle">
+                        <div class="headerDiv">
+
+                            <label for="name" class="nameLabel">”回头看“工作</label>
+                            <label for="statues" class="status">未完成</label>
+                        </div>
+                        <p class="pstyle">6月30日上午，省扶贫办刘叶军处长一行深入到翁堵镇扁里村，对扶贫攻坚和建档立卡”回头看“工作进行监督检查和指导，市扶贫办副主任杨建军、县扶贫办主任杨永军和翁堵镇李向成书记、李仲华镇长一同前往检查。</p>
+
+                        <div class="imgDiv">
+                            <img src="images/屏幕快照 2017-08-12 上午9.23.01.png" class="img1"/>
+
+                        </div>
+
+
+
+
+                    </div>
+                </a>
+
+            </li>
+            <li class="listyle" >
+                <a href="EventDetail.html">
+                    <div class="listDivStyle">
+                        <div class="headerDiv">
+
+                            <label for="name" class="nameLabel">冬训大会讲话</label>
+                            <label for="statues" class="status">已完成</label>
+                        </div>
+                        <p class="pstyle">今天我们倪家巷村党委、村委经集体研究决定，根据上级统一部署要求，召开一年一度的党员、干部、村民代表年终冬训大会，主要任务是学习贯彻落实党的十八届四中全会和中央经济工作会议精神</p>
+
+
+
+
+
+
+                    </div>
+                </a>
+
+            </li>
+            <li class="listyle" >
+                <a href="EventDetail.html">
+                    <div class="listDivStyle">
+                        <div class="headerDiv">
+
+                            <label for="name" class="nameLabel">文明户评选活动</label>
+                            <label for="statues" class="status">未完成</label>
+                        </div>
+                        <p class="pstyle">省扶贫办刘叶军处长一行深入到翁堵镇扁里村，对扶贫攻坚和建档立卡”回头看“工作进行监督检查和指导，市扶贫办副主任杨建军、县扶贫办主任杨永军和翁堵镇李向成书记、李仲华镇长一同前往检查。</p>
+
+
+
+
+
+
+                    </div>
+                </a>
+
+            </li>
+
+
+
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>

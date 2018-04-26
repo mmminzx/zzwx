@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>上传处理结果</title>
+    <link href="../css/zyupload-1.0.0.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+    <link rel="stylesheet" type="text/css" href="../css/swipe.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.icons.min.css">
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../css/jquery.cookie.js"></script>
+    <script src="../js/zhenze/ResultCode.js"></script>
+    <script src="../js/zhenze/ResultCodeUpload.js"></script>
+</head>
+<script>
+    function changetype(){
+        var objS = document.getElementById("type");
+        var type = objS.options[objS.selectedIndex].value;
+        if (type==1)
+        {
+            qstatus1=9;
+        }
+        else if (type==2)
+        {
+            qstatus1=5;
+
+        }
+        else if (type==3)
+        {
+            qstatus1=5;
+        }
+        else if (type==4)
+        {
+
+            qstatus1=5;
+        }
+        else if (type==5)
+        {
+            qstatus1=5;
+        }
+        else if (type==6)
+        {
+            qstatus1=4;
+        }
+
+    }
+</script>
+<body>
+<div data-role="main" class="ui-content"style="padding:0.2em 2em 0em 1em" id="page1">
+    <label for="type">处理结果：</label>
+    <select name="type" id="type" data-theme="f" onchange="changetype()">
+        <!--<option disabled selected value>请选择类型</option>-->
+        <option value="1">已解决</option>
+        <option value="2">需要时间（1天）</option>
+        <option value="3">需要时间（2天）</option>
+        <option value="4" >需要时间（3天）</option>
+        <option value="5">需要时间（6天）</option>
+        <option value="6">难以解决</option>
+
+    </select>
+    </fieldset>
+    <div  id="content" style="padding: 0px;border: 0px;background-color: transparent">
+        <p>*最多上传3张图片</p>
+        <div id="zyupload" class="zyupload"></div>
+        <label for="question">内容：</label>
+        <textarea style="height:280px;" placeholder="输入内容。。。" id="question"></textarea>
+        <label >*提交时会上传当前定位。</label>
+        <button id="fileSubmit" data-theme="f">提交</button>
+
+
+
+
+
+    </div>
+</div>
+<div data-role="popup" data-theme="f" id="myPopup1" class="ui-content" data-overlay-theme="b"></div>
+</body>
+<script>
+    function result() {
+        alert("提交成功");
+    }
+
+</script>
+</html>
